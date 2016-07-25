@@ -26,6 +26,8 @@ function showView(viewName) {
   see /app/checkin/checkin.js for an example of this in action
 */
 
+
+//method that transfers view to the holding view
 function finishedCurrentView() {
   window.location.href = '/app/holding';
 }
@@ -54,6 +56,16 @@ function startLoadingAnimation() {
 function stopLoadingAnimation() {
 
 }
+
+//function to set the currentview in local storage
+function setView(path) {
+  localStorage.setItem('currentView', path);
+}
+//function to get the currentview from local storage
+function getView() {
+  return localStorage.getItem('currentView');
+}
+
 // This is a function that will allow us to store each decision with the username of each user
 //for this we will need to use this line: var username = getUsername(); in each decision function.
 function getUsername() {
