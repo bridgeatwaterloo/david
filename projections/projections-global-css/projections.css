@@ -1,0 +1,36 @@
+/*
+  Green background that can be escaped
+*/
+body {
+  background: green;
+}
+
+/*
+  Applies to all three panels
+*/
+.panel {
+  width: 640px;
+  height: 320px;
+/*  background: red;*/
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  float: left;
+  position: relative;
+}
+
+/*
+  Hide all views by default
+*/
+.view {
+  display: none;
+}
+
+.view-indicator {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+
+
+
