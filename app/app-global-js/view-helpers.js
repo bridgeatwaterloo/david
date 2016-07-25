@@ -9,6 +9,8 @@
   see /app/checkin/checkin.js for an example of this in action
 */
 
+
+//method that transfers view to the holding view
 function finishedCurrentView() {
   window.location.href = '/app/holding';
 }
@@ -38,10 +40,11 @@ function stopLoadingAnimation() {
 
 }
 
+//function to set the currentview in local storage
 function setView(path) {
   localStorage.setItem('currentView', path);
 }
-
+//function to get the currentview from local storage
 function getView() {
   return localStorage.getItem('currentView');
 }
