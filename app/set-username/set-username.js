@@ -7,7 +7,7 @@ function processForm() {
 
   // get the entered user name from the input
   var enteredUsername = $('input').val();
-  localStorage.setItem('Username', enteredUsername);
+  localStorage.setItem('username', enteredUsername);
     database.ref('users/'+ enteredUsername).set({
   	username: enteredUsername
  	});

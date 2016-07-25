@@ -2,10 +2,8 @@ $('.btn-success').click(processDecision)
 $('.btn-danger').click(processDecision)
 
 function processDecision() {
-	var username = localStorage.getItem('Username');
-	console.log(username)
+	var username = getUsername();	
 	var answer = $(this).attr('data-answer');
-	console.log(answer);
 	if (answer === "Yes") {
 		alert("Answered yes!")
 	} else {
