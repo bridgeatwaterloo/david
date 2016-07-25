@@ -1,0 +1,3 @@
+
+
+showView('.view-decision-result');
