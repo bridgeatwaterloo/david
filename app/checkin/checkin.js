@@ -24,7 +24,7 @@ function processCheckin() {
 
       // Our logic. If the distance between our user and the target is less than 100m, show the login screen, else update the view with a helpful message
       if (distance < 1000) {
-        finishedCurrentView();
+        showView('.view-set-username');
       } else {
         $('p.geolocation-message').html('Please try again when you get to the Southbank Centre');
       }
