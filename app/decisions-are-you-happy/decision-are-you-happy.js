@@ -8,6 +8,7 @@ function processDecision() {
 		alert("Answered yes!")
 	} else {
 		alert("Answered no!")
+		showView('.view-set-username')
 	}
 	database.ref('decisions/'+ answer).set({
   	[username]: answer
