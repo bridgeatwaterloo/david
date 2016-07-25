@@ -1,13 +1,27 @@
 $('.load-next-view').on('click', checkNextView);
 
+var nextview = getFireBaseView();
+var previousView = getView();
+
 function checkNextView() {
-	// get previous view from local storage
-  var previousView = getView();
+
   //get next view from firebase
-  var nextview = getFireBaseView();
+  nextview = getFireBaseView();
+  // get previous view from local storage
+  previousView = getView();
+
+
+
+
+
+
+  console.log(nextview, previousView);
 
   // if the next view is not the same as the previous view then go to the next view
-  if(previousView!==nextview){
-  	window.location.href = nextview;
-  }
+  setTimeout(function() {
+    if(previousView !== nextview){
+      window.location.href = nextview;
+    }
+  }, 1000)
+
 }
