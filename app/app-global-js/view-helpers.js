@@ -37,3 +37,15 @@ function startLoadingAnimation() {
 function stopLoadingAnimation() {
 
 }
+
+function setView(path) {
+  localStorage.setItem('currentView', path);
+}
+
+function getView() {
+  return localStorage.getItem('currentView');
+}
+
+
+
+
