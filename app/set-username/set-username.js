@@ -13,8 +13,8 @@ function processForm() {
   	username: enteredUsername
  	});
   
-  finishedCurrentView();
- 	//window.location.href = '/app/davidToLife';
+  //finishedCurrentView();
+ 	window.location.href = '/app/davidToLife';
   $('.username').html(enteredUsername);
 
   return false;
