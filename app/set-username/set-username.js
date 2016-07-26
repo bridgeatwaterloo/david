@@ -13,7 +13,8 @@ function processForm() {
   	username: enteredUsername
  	});
   
-  finishedCurrentView();
+  //finishedCurrentView();
+ 	window.location.href = '/app/davidToLife';
   $('.username').html(enteredUsername);
 
   return false;
