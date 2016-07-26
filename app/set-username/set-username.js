@@ -11,7 +11,9 @@ function processForm() {
     database.ref('users/'+ enteredUsername).set({
   	username: enteredUsername
  	});
-  showView('.view-question');
+  
+  finishedCurrentView();
+
   $('.username').html(enteredUsername);
 
   return false;
