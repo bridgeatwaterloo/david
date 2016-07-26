@@ -9,7 +9,6 @@ function processDecision() {
 		alert("Answered yes!")
 	} else {
 		alert("Answered no!")
-		showView('.view-set-username')
 	}
 	database.ref('more-decision/'+ answer).set({
   	[username]: answer
