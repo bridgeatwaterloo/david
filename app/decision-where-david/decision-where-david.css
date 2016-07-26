@@ -1,1 +1,10 @@
 /* Any view-specific CSS goes in here */
+ #containment-wrapper { width: 95%; height:300px; border:2px solid #ccc; padding: 10px; }
+ #draggable { width: 110px; height: 110px; }
+ .image{
+ 	width: 110px;
+ 	height: 110px;
+ }
+.submit{
+	margin-top: 5px;
+}
