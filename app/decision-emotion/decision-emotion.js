@@ -19,7 +19,7 @@ function processEmotionDecision() {
 	} else {
 		alert("Answered Appathetic")
 	}
-	database.ref('emotion-decision/'+ answer).set({
+	database.ref('emotion-decision/').set({
   	[username]: answer
  	});
 }
