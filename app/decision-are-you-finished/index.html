@@ -3,31 +3,33 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>David</title>
+    <title>David: Are you finished?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/app/app-global-css/bootstrap.css">
-    <link rel="stylesheet" href="/app/app-global-css/html5-boilerplate.css">
-    <link rel="stylesheet" href="/app/app-global-css/david.css">
+    <link rel="stylesheet" href="app/app-global-css/bootstrap.css">
+    <link rel="stylesheet" href="app/app-global-css/html5-boilerplate.css">
+    <link rel="stylesheet" href="app/app-global-css/david.css">
+    <link rel="stylesheet" href="app/decision-are-you-finished/decision-are-you-finished.css">
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
-  <body class="checkin">
+  <body class="decision-are-you-finished">
 
     <nav class="navbar navbar-light bg-faded navbar-fixed-top">
       <div class="container">
-        David
+        David: Are you finished?
       </div>
     </nav>
 
     <div class="container david-container">
 
-      <section class="view">
+      <section class="view view-decision-are-you-finished">
         <div class="card text-xs-center">
           <div class="card-header">
-            David
+            Are you finished with David?
           </div>
           <div class="card-block">
-
-            <a href="/app/checkin" class="btn btn-primary">Go</a>
+            <h4 class="card-title"></h4>
+            <p class="card-text geolocation-message">We need to check you are in the Blue Room at Strive Festival. Please confirm by sharing your location with us.</p>
+            <a href="#" class="btn btn-primary submit-checkin">Check me in</a>
           </div>
         </div>
 
@@ -41,7 +43,8 @@
     <script src="/js/vendor/bootstrap.js"></script>
 
 
-    <script src="/app/app-global-js/view-helpers.js"></script>
+    <script src="app/app-global-js/view-helpers.js"></script>
+    <script src="app/decision-are-you-finished/decision-are-you-finished.js"></script>
 
   </body>
 </html>
