@@ -1,18 +1,16 @@
 var database = firebase.database();
-
+var username = getUsername();
+var noOfTaps =0;
 $('.btn-heartbeat').click(processBeat);
 
 function processBeat() {
-	username.noOfTaps += 1;
-	console.log(username.noOfTaps);
-
+	noOfTaps += 1;
+	console.log(noOfTaps);
+	database.ref('clicks/').update({
+    [username]: noOfTaps,
+  	});
 }
 
 function gotToTenTaps(){
-
-	username.push({
-		key: username,
-		value: username.noOfTaps; 
-	})
 
 }

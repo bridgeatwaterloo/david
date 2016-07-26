@@ -1,4 +1,4 @@
-
+var database = firebase.database();
 // Get the form, listen to its submit event
 $('.form-set-username').on('submit', processForm);
 
@@ -11,7 +11,7 @@ function processForm() {
     database.ref('users/'+ enteredUsername).set({
   	username: enteredUsername
  	});
-  showView('.view-question');
+  window.location.href = '/app/davidToLife';
   $('.username').html(enteredUsername);
 
   return false;
