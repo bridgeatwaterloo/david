@@ -1,4 +1,3 @@
-
 // Get the form, listen to its submit event
 $('.form-set-username').on('submit', processForm);
 var currentView = window.location.pathname;
@@ -15,7 +14,7 @@ function processForm() {
  	});
   
   finishedCurrentView();
-
+ 	//window.location.href = '/app/davidToLife';
   $('.username').html(enteredUsername);
 
   return false;
