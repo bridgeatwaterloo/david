@@ -10,7 +10,7 @@ function processDecision() {
 	} else {
 		alert("Answered no!")
 	}
-	database.ref('more-decision/'+ answer).set({
+	database.ref('more-decision/').set({
   	[username]: answer
  	});
 }
