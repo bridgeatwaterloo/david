@@ -10,10 +10,6 @@
   showView('.view-checkin');
 */
 
-function showView(viewName) {
-  $('.view').hide();
-  $(viewName).show();
-}
 
 /*
 
