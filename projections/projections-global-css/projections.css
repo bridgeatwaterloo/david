@@ -1,9 +1,9 @@
 /*
   Green background that can be escaped
 */
-body {
-  background: green;
-}
+/*body {
+  background: blue;
+}*/
 
 /*
   Applies to all three panels
@@ -22,7 +22,8 @@ body {
   Hide all views by default
 */
 .view {
-  display: none;
+  display: center;
+
 }
 
 .view-indicator {
@@ -31,6 +32,20 @@ body {
   right: 5%;
 }
 
+h1 {
+  background-color: red;
+  padding: 70%;
+  height: 20px;
+  position: fixed;
+}
 
-
-
+/*h1 {
+  color: pink;
+  left: 0;
+  margin-left: 
+  position: absolute;
+  text-align: right;
+  right: 100%;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 2s;
+*/
