@@ -16,9 +16,6 @@ function processClothingDecision() {
 	} else {
 		alert("Answered Trousers")
 	}
-
-
-
 	database.ref('clothing-decision/'+ answer).set({
   	[username]: answer
  	});
