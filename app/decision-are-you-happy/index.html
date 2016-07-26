@@ -1,4 +1,4 @@
-<!doctype html>
+      <!doctype html>
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8">
@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="/app/app-global-css/bootstrap.css">
     <link rel="stylesheet" href="/app/app-global-css/html5-boilerplate.css">
     <link rel="stylesheet" href="/app/app-global-css/david.css">
-    <link rel="stylesheet" href="/app/view-name/view-name.css">
+    <link rel="stylesheet" href="/app/decision-are-you-happy/decision-are-you-happy.css">
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
-  <body class="view-name">
+  <body class="decision-are-you-happy">
 
     <nav class="navbar navbar-light bg-faded navbar-fixed-top">
       <div class="container">
@@ -21,14 +21,23 @@
 
     <div class="container david-container">
 
-      <section class="view">
+            <section class="view view-question">
         <div class="card text-xs-center">
           <div class="card-header">
-            View name
+            Question
           </div>
+          <div class="card-block">
+            <h4 class="card-title">Are you happy, <span class="username">@username</span>?</h4>
+            <p class="card-text"></p>
 
+            <div class="btn-group">
+            <form>
+              <button type="button" class="btn btn-success" data-answer = "Yes">Yes</button>
+              <button type="button" class="btn btn-danger" data-answer = "No">No</button>
+              </form>
+            </div>
+          </div>
         </div>
-
       </section>
 
     </div><!-- end of .david-container -->
@@ -38,9 +47,10 @@
     <script src="/js/vendor/tether.js"></script>
     <script src="/js/vendor/bootstrap.js"></script>
 
-
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+    <script src="/app/app-global-js/firebase-helpers.js"></script>
     <script src="/app/app-global-js/view-helpers.js"></script>
-    <script src="/app/view-name/view-name.js"></script>
+    <script src="/app/decision-are-you-happy/decision-are-you-happy.js"></script>
 
   </body>
 </html>

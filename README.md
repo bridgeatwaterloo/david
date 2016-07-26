@@ -19,3 +19,15 @@ index.html is the main app for the audience.
 * decision-want-more
 * decision-are-you-finished
 * review-david
+
+Added view names by Machinewarlock
+* decision-reason-for-david-to-move
+* done
+* pay-attention
+* percentage-of-vote
+* slider-horizontal
+* slider-vertical
+* time-left-with-david
+* review-how-was-david
+* review-would-you-see-david-again
+* review-thank-you
