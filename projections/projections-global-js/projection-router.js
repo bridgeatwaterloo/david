@@ -6,12 +6,9 @@ firebase.database().ref('view').on('value', function(snapshot) {
 	        		alert("checkin");
 	        		//code block
 	        		break;
-		    case"/app/set-username" :
-		    		//code block
-		    		alert("username");
-		    		break;
 		    case"/app/onboarding/" :
 		    		//code block
+		    		alert("username");
 		    		break;
 		    case"/app/decision-are-you-happy/" :
 		    		//code block
@@ -82,9 +79,9 @@ firebase.database().ref('view').on('value', function(snapshot) {
 showView('.view-decision-result');
 
 function where-david(){
-	
+
 	firebase.database().ref('view').on('value', function(snapshot) {
-		
+
 
 	}
 
