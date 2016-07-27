@@ -11,7 +11,7 @@ function processDecision() {
 		alert("Answered no!")
 		showView('.view-set-username')
 	}
-	database.ref('decisions/').set({
+	database.ref('decisions/').update({
   	[username]: answer
  	});
 }
