@@ -3,11 +3,14 @@ $('.btn-jacket').click(processClothingDecision)
 $('.btn-tie').click(processClothingDecision)
 $('.btn-trousers').click(processClothingDecision)
 
+var username = getUsername();
+$('.username').html(username);
+
 var currentView = window.location.pathname;
 setView(currentView);
 
 function processClothingDecision() {
-	var username = getUsername();
+
 	var answer = $(this).attr('data-answer');
 	if (answer === "Shoes") {
 		alert("Answered shoes!")

@@ -4,11 +4,14 @@ $('.btn-needy').click(processEmotionDecision)
 $('.btn-frustrated').click(processEmotionDecision)
 $('.btn-appathetic').click(processEmotionDecision)
 
+var username = getUsername();
+$('.username').html(username);
+
 var currentView = window.location.pathname;
 setView(currentView);
 
 function processEmotionDecision() {
-	var username = getUsername();
+
 	var answer = $(this).attr('data-answer');
 	if (answer === "Unhappy") {
 		alert("Answered unhappy!")
