@@ -15,7 +15,6 @@ function processForm() {
  	});
   
   finishedCurrentView();
- 	//window.location.href = '/app/davidToLife';
   
   return false;
 }

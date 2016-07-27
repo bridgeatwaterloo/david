@@ -16,6 +16,6 @@ function processBeat() {
   	database.ref('gotToTenTaps/').update({
     [username]:"Yes"
   	}); // if the number of taps gets to 10 then their name is added to the gotToTenTaps record so that their name can be projected
+      finishedCurrentView() 
   } //close the if
-  finishedCurrentView();
 } // close the function
