@@ -1,8 +1,7 @@
 $('.btn-success').click(processDecision)
 $('.btn-danger').click(processDecision)
 
-var currentView = window.location.pathname;
-setView(currentView);
+startCurrentView();
 
 function processDecision() {
 	var username = getUsername();

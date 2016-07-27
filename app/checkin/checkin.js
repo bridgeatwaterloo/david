@@ -1,9 +1,7 @@
 // When the user clicks the button
 $('.submit-checkin').click(processCheckin);
 
-
-var currentView = window.location.pathname;
-setView(currentView);
+startCurrentView();
 
 function processCheckin() {
   // Start by checking if geolocation is available

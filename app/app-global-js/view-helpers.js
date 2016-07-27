@@ -1,5 +1,19 @@
 /*
 
+  startCurrentView
+
+  tells the app to stay on the holding page
+  until a new view is selected on the dashboard
+
+*/
+
+function startCurrentView() {
+var currentView = window.location.pathname;
+setView(currentView);
+}
+
+/*
+
   finishedCurrentView
 
   redirects the app to the holding page

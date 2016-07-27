@@ -3,8 +3,7 @@ $('.btn-danger').click(processDecision)
 var username = getUsername();
 $('.username').html(username);
 
-var currentView = window.location.pathname;
-setView(currentView);
+startCurrentView();
 
 function processDecision() {
 	

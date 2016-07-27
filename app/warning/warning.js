@@ -1,3 +1,2 @@
-var currentView = window.location.pathname;
-setView(currentView);
+startCurrentView();
 finishedCurrentView();
