@@ -3,6 +3,8 @@ $('.btn-jacket').click(processClothingDecision)
 $('.btn-tie').click(processClothingDecision)
 $('.btn-trousers').click(processClothingDecision)
 
+var currentView = window.location.pathname;
+setView(currentView);
 
 function processClothingDecision() {
 	var username = getUsername();
@@ -19,4 +21,5 @@ function processClothingDecision() {
 	database.ref('clothing-decision/').update({
   	[username]: answer
  	});
+ 	finishedCurrentView();
 }

@@ -4,6 +4,8 @@ $('.btn-needy').click(processEmotionDecision)
 $('.btn-frustrated').click(processEmotionDecision)
 $('.btn-appathetic').click(processEmotionDecision)
 
+var currentView = window.location.pathname;
+setView(currentView);
 
 function processEmotionDecision() {
 	var username = getUsername();
@@ -22,4 +24,5 @@ function processEmotionDecision() {
 	database.ref('emotion-decision/').update({
   	[username]: answer
  	});
+ 	finishedCurrentView();
 }

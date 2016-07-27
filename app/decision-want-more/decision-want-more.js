@@ -1,6 +1,9 @@
 $('.btn-success').click(processDecision)
 $('.btn-danger').click(processDecision)
 
+var currentView = window.location.pathname;
+setView(currentView);
+
 function processDecision() {
 	var username = getUsername();
 	console.log(username)
@@ -13,4 +16,5 @@ function processDecision() {
 	database.ref('more-decision/').update({
   	[username]: answer
  	});
+ 	finishedCurrentView();
 }

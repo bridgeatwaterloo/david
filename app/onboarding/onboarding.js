@@ -1,5 +1,6 @@
 // Get the form, listen to its submit event
 $('.form-set-username').on('submit', processForm);
+
 var currentView = window.location.pathname;
 setView(currentView);
 
@@ -7,15 +8,14 @@ setView(currentView);
 function processForm() {
 
   // get the entered user name from the input
-  var enteredUsername = $('input').val();
-  localStorage.setItem('username', enteredUsername);
-    database.ref('users/'+ enteredUsername).set({
-  	username: enteredUsername
+  var username = $('input').val();
+  localStorage.setItem('username', username);
+    database.ref('users/'+ username).set({
+  	username: username
  	});
   
   finishedCurrentView();
  	//window.location.href = '/app/davidToLife';
-  $('.username').html(enteredUsername);
-
+  
   return false;
 }

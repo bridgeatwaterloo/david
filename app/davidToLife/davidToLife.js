@@ -1,5 +1,9 @@
 var username = getUsername(); // gets the universal username for this user
 var noOfTaps = 0; // declares the variable noOfTaps and sets it to zero
+
+var currentView = window.location.pathname;
+setView(currentView);
+
 $('.btn-heartbeat').click(processBeat); // listens for how many times the user clicks the heart and calls the process beat function
 
 function processBeat() {
@@ -13,5 +17,5 @@ function processBeat() {
     [username]:"Yes"
   	}); // if the number of taps gets to 10 then their name is added to the gotToTenTaps record so that their name can be projected
   } //close the if
+  finishedCurrentView();
 } // close the function
-
