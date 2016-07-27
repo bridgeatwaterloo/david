@@ -1,4 +1,11 @@
 .david-container {
     text-align: center;
     margin-top: 5rem;
+    
 }
+
+.image-link {
+	display: block;
+	margin: auto;
+}
+
