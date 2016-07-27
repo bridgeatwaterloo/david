@@ -22,6 +22,7 @@ index.html is the main app for the audience.
 
 Added view names by Machinewarlock
 * decision-reason-for-david-to-move
+* warning
 * done
 * pay-attention
 * percentage-of-vote
