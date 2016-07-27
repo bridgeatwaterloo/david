@@ -27,7 +27,7 @@
           <div class="card-header">
             Onboarding
           </div>
-          <div class="username">
+          <div class="username all">
             <h4 class="card-title">Welcome to David</h4>
             <p class="card-text">What would you like your username to be?</p>
 
@@ -36,20 +36,25 @@
               <input type="text" class="form-control" name="datalabel" placeholder="Choose your username">
             </form>
             <img src="/app/epoq_logo-icon_WHITE.svg" class="imguy">
+            <button type="button" class="btn btn-username">Enter</button>
+
           </div>
 
-          <div class="prep">
+          <div class="prep all">
             <h4 class="card-title">The David set up</h4>
             <p class="card-text geolocation-message">Epoq requires you make some preparation before building David. Please remove auto lock on your phone. Please turn up the brightness and set the sound to silent. Please do not browse privately or incognito.</p>
-            <img src="/app/epoq_logo-icon_WHITE.svg" class="imguy">   
+            <img src="/app/epoq_logo-icon_WHITE.svg" class="imguy"> 
+            <button type="button" class="btn btn-prep">Enter</button>
+  
           </div>
 
-          <div class="instruction">
+          <div class="instruction all">
             <h4 class="card-title">How it works</h4>
             <p>In order to build and control David you will work together with the rest of the audience and the majority will rule in some scenes, in others the responsibility will be handed to a single person..</p>
             <img src="/app/epoq_logo-icon_WHITE.svg" class="imguy">
 
             <p>You are in control of David.</p>
+            <button type="button" class="btn btn-instruction">Enter</button>
 
             <a href="/app/david-to-life" class="btn btn-primary submit-checkin">Join David</a>
           </div>
@@ -58,17 +63,7 @@
       </section>
 
     </div><!-- end of .david-container -->
-
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyCyR0kEZZHbteODP2xAnSplh5GZquj7_lY",
-        authDomain: "davidtolife.firebaseapp.com",
-        databaseURL: "https://davidtolife.firebaseio.com",
-        storageBucket: "davidtolife.appspot.com",
-      };
-      firebase.initializeApp(config);
-    </script>
+    
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
