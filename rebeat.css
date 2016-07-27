@@ -1,0 +1,40 @@
+@import "bourbon";
+
+// Animate the EKG like a line
+@keyframes dash {
+  to {
+    stroke-dashoffset:-1200;
+  }
+}
+
+@keyframes fade {
+  0%  {opacity:1}
+  20% {opacity:0}
+}
+
+
+svg {margin:0 -1rem}
+.ekg {
+  opacity:1;
+  stroke-dasharray:600;
+//  stroke-dashoffset:1200;
+  @include animation(dash 1.5s linear forwards infinite,fade 1.5s linear infinite);
+}
+
+//.ekg2 {
+//  stroke-dasharray:1035;
+//  stroke-dashoffset:1100;
+//  @include animation(dash 1.5s 0.25s ease forwards infinite);
+//}
+
+
+
+// Make it flatline
+//@keyframes line {
+//  0% {width:0}
+//  100% {width:100%}
+//}
+//.flatline {
+//  width:0;
+//  @include animation(line 3s ease infinite);
+//}
