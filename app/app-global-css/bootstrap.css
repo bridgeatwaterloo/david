@@ -12,8 +12,16 @@ html {
 
 body {
   margin: 0;
+
 }
 
+p{
+  color: white;
+}
+
+.card.text-xs-center{
+  background-color: #0300bf; 
+}
 article,
 aside,
 details,

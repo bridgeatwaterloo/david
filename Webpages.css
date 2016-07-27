@@ -1,0 +1,32 @@
+/*
+
+.location-heading finds all elements in the html that have a class of locationlink
+
+e.g. 
+
+ <h2 class="location-heading">H2 content</h2>
+
+*/
+
+
+.location-heading {
+	margin: 50px;
+	font-size: 16px;
+}
+
+.image-link {
+	display: block;
+	margin: auto;
+	margin-top: 30px;
+}
+
+.view {
+	background-color: black;
+}
+
+div .card-header{
+	background-color: #87CEFA;
+}	
+.location-heading{
+color: white
+}
