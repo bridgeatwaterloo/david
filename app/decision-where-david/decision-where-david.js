@@ -1,4 +1,6 @@
 var targetPosition;
+var currentView = window.location.pathname;
+setView(currentView);
 $( "#draggable" ).draggable({ containment: "#containment-wrapper", scroll: false , 
 	drag: function(){
             // var offset = $(this).offset();
@@ -42,4 +44,5 @@ function submit() {
         [username]: targetPosition
     });
     console.log("David's target position: " + targetPosition);
+    finishedCurrentView();
 }
