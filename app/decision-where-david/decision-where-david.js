@@ -40,7 +40,7 @@ function processPosition(xPos, yPos, parentWidth, parentHeight) {
 
 function submit() {
     var username = getUsername();
-    database.ref('decision-where-david').set({
+    database.ref('decision-where-david').update({
         [username]: targetPosition
     });
     console.log("David's target position: " + targetPosition);
