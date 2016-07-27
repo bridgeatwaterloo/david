@@ -3,3 +3,6 @@ function showView(view) {
   $(view).show();
 }
 
+function Result(){
+
+}
