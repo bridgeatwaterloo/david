@@ -8,56 +8,39 @@
     <link rel="stylesheet" href="/app/app-global-css/bootstrap.css">
     <link rel="stylesheet" href="/app/app-global-css/html5-boilerplate.css">
     <link rel="stylesheet" href="/projections/projections-global-css/projections.css">
-    <link rel="stylesheet" type="text/css" href="/projections/projections-global-css/pulse.css">
+    <link rel="stylesheet" href="/projections/projections-global-css/pulse.css">
+    <link rel="stylesheet" href="/projections/heartbeat/heartbeat.css">
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
   <body>
 
-    <div class="panel panel-left">
+  <div class="heartbeat-overlay heartbeat-left-overlay"></div>
+  <div class="heartbeat-overlay heartbeat-right-overlay"></div>
 
-    </div><!-- / END .panel-left-->
+<div class="heartbeat-content">
+<svg class="waveSVG" x="0px" y="0px" viewBox="0 0 298 53.9"> <!--"waveSVG" x="0px" y="0px" viewBox="0 0 298 53.9"-->
+<defs>
+<filter id="glow" y="-50%" height="200%"> <!--y="-50%" height="200%">-->
+    <feGaussianBlur stdDeviation="1 1" result="coloredBlur"/> <!--stdDeviation="1 1"-->
+    <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+</filter> 
+</defs>
+  <path class="pulseMiddle" fill="none" stroke="#fff" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"  d="M297.5,41.2h-76.6c-0.5,0-0.9,0.4-1,0.8l-1.6,11.3l-3.1-32c0-0.5-0.4-0.9-0.9-0.9c-0.5,0-0.9,0.3-1,0.8
+            l-5.3,25.5l-2.3-10.9c-0.1-0.4-0.4-0.7-0.9-0.8c-0.4,0-0.8,0.2-1,0.6l-2.3,4.8h-107c0,0,0,0,0,0H82c-1.6,0-2.2,1.1-2.2,1.6
+            l-1.6,11.3l-3.1-52c0-0.5-0.4-0.9-0.9-0.9c-0.5,0-0.9,0.3-1,0.8l-9.3,45.5l-2.3-10.9c-0.1-0.4-0.4-0.7-0.9-0.8c-0.4,0-0.8,0.2-1,0.6
+            l-2.3,4.8H0.5"/> <!--stroke width="0.2"-->
+</svg>
 
-    <div class="panel panel-center">
-
-      <section class="view view-indicator">
-
-        <div id="container">
-          <div class="dot"></div>
-          <div class="pulse"></div>
-        </div>
-
-      </section><!-- / .view-indicator -->
-
-      <section class="view view-onboarding">
-
-        <div class="heartbeat">
-
-          Heartbeat HTML goes here
-
-        </div>
-
-      </section><!-- / .view-indicator -->
-
-
-      <section class="view view-decision-result">
-
-        <div class="heartbeat">
-
-          <h1>You chose:</h1>
-          <p>Result</p>
-
-        </div>
-
-      </section><!-- / .view-indicator -->
+</div>
 
 
 
 
-    </div><!-- / END .panel-left-->
 
-    <div class="panel panel-right">
 
-    </div><!-- / END .panel-left-->
 
 
 
@@ -68,6 +51,9 @@
 
     <script src="/projections/projections-global-js/projections-helpers.js"></script>
     <script src="/projections/projections-global-js/projections.js"></script>
+   
+   
+
 
   </body>
 </html>
