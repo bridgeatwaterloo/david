@@ -1,75 +1,40 @@
-
-
-/*body, html {
-    height: 100%;
-    width: 100%;
-    margin: 0px;
-    padding: 0;
-}*/
-
 svg {
   position: absolute;
   width:100%;
+  left: 0;
   height:100%;
 }
 
-/*.heartbeat-overlay {
-transition-timing-function: linear;
--webkit-transition: width 4s; /* Safari */
-/* transition: width 4s;
-}*/
-
-
-.heartbeat-left-overlay {
-	height: 100%;
-    width: 0%;
-    position: absolute; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0%;
-    top: 0;
-    background-color: green;
-    /*background-color: red;*/
-    /*overflow-x: hidden;*/ /* Disable horizontal scroll */
-    /*transition: 0.5s;*/ /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-}
-/*
-body:hover .heartbeat-left-overlay {
-	width: 90%;
-}*/
-
-
-
-
-
+ 
 .heartbeat-content {
-  
   overflow:hidden;
-
   position: absolute;
-  top: 10%;
   right: 0%;
-  height: 100%;
+  top: 10%;
+  height: 80%;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-
+.heartbeat-left-overlay {
+	height: 100%;
+  width: 0%;
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0%;
+  top: 0;
+  background-color:rgba(255,255,255,0.5);
+}
 
 .heartbeat-right-overlay {
 	height: 100%;
-    width: 90%;
-    position: absolute; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    right: 0;
-    top: 0;
-    background-color: green;
-    /*background-color: yellow;*/
-    /*overflow-x: hidden;*/ /* Disable horizontal scroll */
-    /*transition: 0.5s;*/ /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-}
-/*
-body:hover .heartbeat-right-overlay { 
-	width: 0%;
-}*/
+  width: 90%;
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  right: 0;
+  top: 0;
+  background-color: rgba(255,255,255,0.5);
+} 
+
 
