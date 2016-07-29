@@ -4,9 +4,13 @@ $('.btn-needy').click(processEmotionDecision)
 $('.btn-frustrated').click(processEmotionDecision)
 $('.btn-appathetic').click(processEmotionDecision)
 
+var username = getUsername();
+$('.username').html(username);
+
+startCurrentView();
 
 function processEmotionDecision() {
-	var username = getUsername();
+
 	var answer = $(this).attr('data-answer');
 	if (answer === "Unhappy") {
 		alert("Answered unhappy!")
@@ -19,7 +23,8 @@ function processEmotionDecision() {
 	} else {
 		alert("Answered Appathetic")
 	}
-	database.ref('emotion-decision/').update({
+	database.ref('decision-emotion/').update({
   	[username]: answer
  	});
+ 	finishedCurrentView();
 }

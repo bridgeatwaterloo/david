@@ -1,17 +1,22 @@
 $('.btn-success').click(processDecision)
 $('.btn-danger').click(processDecision)
+var username = getUsername();
+$('.username').html(username);
+
+startCurrentView();
 
 function processDecision() {
-	var username = getUsername();
+	
 	console.log(username)
 	var answer = $(this).attr('data-answer');
 	if (answer === "Yes") {
 		alert("Answered yes!")
 	} else {
 		alert("Answered no!")
-		showView('.view-set-username')
 	}
-	database.ref('decisions/').update({
+	database.ref('decision-are-you-happy/').update({
   	[username]: answer
  	});
+ 	finishedCurrentView();
 }
+

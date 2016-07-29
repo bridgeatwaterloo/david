@@ -16,6 +16,7 @@ body {
   border-right: 1px solid black;
   float: left;
   position: relative;
+  z-index: 10;
 }
 
 /*

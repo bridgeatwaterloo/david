@@ -1,3 +1,0 @@
-
-
-showView('.view-decision-result');

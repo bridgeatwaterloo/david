@@ -1,8 +1,13 @@
 $('.btn-success').click(processDecision)
 $('.btn-danger').click(processDecision)
 
+var username = getUsername();
+$('.username').html(username);
+
+startCurrentView();
+
 function processDecision() {
-	var username = getUsername();
+
 	console.log(username)
 	var answer = $(this).attr('data-answer');
 	if (answer === "Yes") {
@@ -10,7 +15,8 @@ function processDecision() {
 	} else {
 		alert("Answered no!")
 	}
-	database.ref('more-decision/').update({
+	database.ref('decision-want-more/').update({
   	[username]: answer
  	});
+ 	finishedCurrentView();
 }
