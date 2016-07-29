@@ -1,7 +1,7 @@
 // Initialization functions:
 
 function initializeHeartbeat() {
-	showView('.david-to-life');
+	showIndicatorView('.david-to-life');
 	startHeartbeat();
 }
 
@@ -14,10 +14,10 @@ firebase.database().ref('view').on('value', function(snapshot) {
 	       		break;
 		   case "/app/onboarding/" :
 		   		//code block
-		   		showView('.onboarding');
+		   		showView('.view-onboarding');
 		   		break;
 		   case "/app/decision-are-you-happy/" :
-		   		showView('.decision-are-you-happy');
+		   		showIndicatorView('.decision-are-you-happy');
 		   		//code block
 		   		break;
 		   case "/app/david-to-life/" :
@@ -25,11 +25,7 @@ firebase.database().ref('view').on('value', function(snapshot) {
 		   		//code block
 		   		break;
 		   case "/app/decision-where-david/" :
-		   		showView('.decision-where-david');
-		   		//code block
-		   		break;
-		   case "/app/decision-reason-for-david-to-move/" :
-		   		showView('.decision-reason-for-david-to-move');
+		   		showIndicatorView('.decision-where-david');
 		   		//code block
 		   		break;
 		   case "/app/warning/" :
@@ -37,63 +33,23 @@ firebase.database().ref('view').on('value', function(snapshot) {
 		   		//code block
 		   		break;
 		   case "/app/decision-clothing/" :
-		   		showView('.decision-clothing');
+		   		showIndicatorView('.decision-clothing');
 		   		//code block
 		   		break;
 		   case "/app/decision-emotion/" :
-		   		showView('.decision-emotion');
-		   		//code block
-		   		break;
-		   case "/app/slider-horizontal/" :
-		   		showView('.slider-horizontal');
-		   		//code block
-		   		break;
-		   case "/app/slider-vertical/" :
-		   		showView('.slider-vertical');
-		   		//code block
-		   		break;
-		   case "/app/calculating-results/" :
-		   		showView('.calculating-results');
-		   		//code block
-		   		break;
-		   case "/app/done/" :
-		   		showView('.done');
-		   		//code block
-		   		break;
-		   case "/app/percentage-of-vote/" :
-		   		showView('.percentage-of-vote');
-		   		//code block
-		   		break;
-		   case "/app/pay-attention/" :
-		   		showView('.pay-attention');
+		   		showIndicatorView('.decision-emotion');
 		   		//code block
 		   		break;
 		   case "/app/decision-want-more/" :
-		   		showView('.decision-want-more');
-		   		//code block
-		   		break;
-		   case "/app/time-left-with-david/" :
-		   		showView('.time-left-with-david');
+		   		showIndicatorView('.decision-want-more');
 		   		//code block
 		   		break;
 		   case "/app/decision-are-you-finished/" :
-		   		showView('.decision-are-you-finished');
+		   		showIndicatorView('.decision-are-you-finished');
 		   		//code block
 		   		break;
 		   case "/app/review-david" :
-		   		showView('.review-david');
-		   		//code block
-		   		break;
-		   case "/app/review-how-was-david/" :
-		   		showView('.review-how-was-david');
-		   		//code block
-		   		break;
-		   case "/app/review-would-you-see-david-again/" :
-		   		showView('.review-would-you-see-david-again');
-		   		//code block
-		   		break;
-		   case "/app/review-thank-you/" :
-		   		showView('.review-thank-you');
+		   		showIndicatorView('.review-david');
 		   		//code block
 		   		break;
 			default:

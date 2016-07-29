@@ -21,7 +21,7 @@ $('.btn-prep').click(function(){
 
 $('.form-set-username').on('submit', processForm);
 
-
+$('.btn-instruction').click(finishedCurrentView);
 
 // function to run when the form is submitted
 function processForm() {
@@ -36,11 +36,9 @@ function processForm() {
 		database.ref('users/'+ username).set({
     	username: username
     });
-
-
- 	finishedCurrentView();
  	return false;
 };
 
 showDiv(".username")
 startCurrentView();
+
