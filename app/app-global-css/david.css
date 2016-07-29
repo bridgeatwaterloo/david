@@ -126,3 +126,7 @@
   100% { transform: translateX(15px);  
    }
 }
+
+.david-container{
+  margin-top: 50px;
+}
