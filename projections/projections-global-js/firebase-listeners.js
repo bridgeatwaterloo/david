@@ -129,10 +129,34 @@ firebase.database().ref('decision-where-david').on('value', function(snapshot){
 	var length = values.length;
 	var random =  Math.floor((Math.random() * length-1) + 1);
 
-	console.log(values);
-	console.log(random);
+	//console.log(values);
+	//console.log(random);
 	var name = values[random][0];
 	var position = values[random][1]
 	$(".decision-where-david-name").html(name);
 	$(".decision-where-david-result").html(position);
+});
+
+firebase.database().ref('clicks').on('value', function(snapshot){
+	var clicks = 0;
+
+	snapshot.forEach(function(data){
+		clicks = clicks +data.val();
+	});
+	console.log(clicks);
+
+	if(clicks<50){
+		speed=4000;
+
+	}else if (clicks<100){
+		speed=3000;
+	}else if (clicks<150){
+		speed=2500;
+	}else if (clicks<200){
+		speed=2000;
+	}else{
+		speed=1500
+	}
+
+
 });
