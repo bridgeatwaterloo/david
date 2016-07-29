@@ -143,7 +143,7 @@ firebase.database().ref('clicks').on('value', function(snapshot){
 	snapshot.forEach(function(data){
 		clicks = clicks +data.val();
 	});
-	console.log(clicks);
+	//console.log(clicks);
 
 	if(clicks<50){
 		speed=4000;
