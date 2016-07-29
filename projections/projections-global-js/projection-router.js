@@ -10,8 +10,6 @@ firebase.database().ref('view').on('value', function(snapshot) {
 	  switch(view) {
 	       case "/app/checkin/" :
 	       		//code block
-	       		console.log("test")
-	       		//showIndicatorView('.checkin');
 	       		showView('.checkin');
 	       		break;
 		   case "/app/onboarding/" :
@@ -35,23 +33,23 @@ firebase.database().ref('view').on('value', function(snapshot) {
 		   		//code block
 		   		break;
 		   case "/app/decision-clothing/" :
-		   		showView('.decision-clothing');
+		   		showIndicatorView('.decision-clothing');
 		   		//code block
 		   		break;
 		   case "/app/decision-emotion/" :
-		   		showView('.decision-emotion');
+		   		showIndicatorView('.decision-emotion');
 		   		//code block
 		   		break;
 		   case "/app/decision-want-more/" :
-		   		showView('.decision-want-more');
+		   		showIndicatorView('.decision-want-more');
 		   		//code block
 		   		break;
 		   case "/app/decision-are-you-finished/" :
-		   		showView('.decision-are-you-finished');
+		   		showIndicatorView('.decision-are-you-finished');
 		   		//code block
 		   		break;
 		   case "/app/review-david" :
-		   		showView('.review-david');
+		   		showIndicatorView('.review-david');
 		   		//code block
 		   		break;
 			default:
