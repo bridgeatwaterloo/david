@@ -20,7 +20,7 @@ function processClothingDecision() {
 	} else {
 		alert("Answered Trousers")
 	}
-	database.ref('clothing-decision/').update({
+	database.ref('decision-clothing/').update({
   	[username]: answer
  	});
  	finishedCurrentView();

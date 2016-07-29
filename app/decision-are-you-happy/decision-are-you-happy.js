@@ -14,7 +14,7 @@ function processDecision() {
 	} else {
 		alert("Answered no!")
 	}
-	database.ref('decisions/').update({
+	database.ref('decision-are-you-happy/').update({
   	[username]: answer
  	});
  	finishedCurrentView();

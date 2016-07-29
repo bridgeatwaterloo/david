@@ -12,7 +12,7 @@ function processDecision() {
 	} else {
 		alert("Answered no!")
 	}
-	database.ref('Finished-decisions/').update({
+	database.ref('decision-are-you-finished/').update({
   	[username]: answer
  	});
  	finishedCurrentView();
