@@ -43,18 +43,19 @@ firebase.database().ref('decision-clothing').on('value', function(snapshot){
 		}
 	});
 
-
+	//create an array to hold all of the choices and the number of users that chose each choice
 	var keyValues = [];
 
+	//transfer the options and user choices into the array from the list object
 	for(var key in list){
 		keyValues.push([key,list[key]])
 	}
-
+	//sort the array so that the highest value (option selected by most users) is in the last element
 	keyValues.sort(function compare(kv1,kv2){
 		return kv1[1]-kv2[1];
 	});
 
-	//console.log(keyValues[3]);
+	//send the key of the last element to the html, this is the name of the option that most users selected
 	$(".decision-clothing-result").html(keyValues[3][0]);
 
 });
@@ -85,17 +86,19 @@ firebase.database().ref('decision-emotion').on('value', function(snapshot){
 	});
 
 
+	//create an array to hold all of the choices and the number of users that chose each choice
 	var keyValues = [];
 
+	//transfer the options and user choices into the array from the list object
 	for(var key in list){
 		keyValues.push([key,list[key]])
 	}
-
+	//sort the array so that the highest value (option selected by most users) is in the last element
 	keyValues.sort(function compare(kv1,kv2){
 		return kv1[1]-kv2[1];
 	});
 
-	//console.log(keyValues[3]);
+	//send the key of the last element to the html, this is the name of the option that most users selected
 	$(".decision-emotion-result").html(keyValues[4][0]);
 
 });
