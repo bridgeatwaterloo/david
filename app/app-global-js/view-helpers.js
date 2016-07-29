@@ -1,15 +1,16 @@
 /*
 
-  showView
+  startCurrentView
 
-  accepts the class name of a view you wish to show
-  hides all views, and then shows the view you passed it
+  tells the app to stay on the holding page
+  until a new view is selected on the dashboard
 
-  Example use:
-
-  showView('.view-checkin');
 */
 
+function startCurrentView() {
+var currentView = window.location.pathname;
+setView(currentView);
+}
 
 /*
 
@@ -39,8 +40,10 @@ function finishedCurrentView() {
 
 function startLoadingAnimation() {
 
-}
+  $('body').append('<div class="loading-animation-container"><div class="loading-animation"><div class="ball"></div><div class="ball"></div><div class="ball"></div><div class="ball"></div><div class="ball"></div><div class="ball"></div><div class="ball"></div></div></div>');
 
+}
+ 
 /*
 
   stopLoadingAnimation
@@ -50,7 +53,7 @@ function startLoadingAnimation() {
 */
 
 function stopLoadingAnimation() {
-
+  $('.loading-animation').remove();
 }
 
 //function to set the currentview in local storage

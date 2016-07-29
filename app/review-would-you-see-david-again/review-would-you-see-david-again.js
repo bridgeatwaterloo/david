@@ -1,6 +1,8 @@
 $('.btn-success').click(processDecision)
 $('.btn-danger').click(processDecision)
 
+startCurrentView();
+
 function processDecision() {
 	var username = getUsername();
 	console.log(username)
@@ -10,7 +12,8 @@ function processDecision() {
 	} else {
 		alert("Answered no!")
 	}
-	database.ref('would-you-see-david-again-decisions/').set({
+	database.ref('review-would-you-see-david-again/').set({
   	[username]: answer
  	});
+ 	finishedCurrentView();
 }
