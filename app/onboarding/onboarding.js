@@ -1,19 +1,46 @@
+function showDiv(divName) {
+  $('.all').hide();
+  $(divName).show();
+}
+
+// When the user clicks the button
+$('.btn-username').click(processForm, function(){
+	showDiv(".prep");
+	$('.btn-all').hide();
+	setTimeout(function() {$('.btn-prep').show();},10000);
+	
+});
+
+// When the user clicks the button
+$('.btn-prep').click(function(){
+	showDiv(".instruction");
+	setTimeout(function() {$('.btn-instruction').show();},10000);
+})
+
 // Get the form, listen to its submit event
+
 $('.form-set-username').on('submit', processForm);
 
-startCurrentView();
+
 
 // function to run when the form is submitted
 function processForm() {
 
-  // get the entered user name from the input
-  var username = $('input').val();
-  localStorage.setItem('username', username);
-    database.ref('users/'+ username).set({
-  	username: username
- 	});
-  
-  finishedCurrentView();
-  
-  return false;
-}
+
+	showDiv(".prep");
+	$('.btn-all').hide();
+	setTimeout(function() {$('.btn-prep').show();},10000);
+ // get the entered user name from the input
+	var username = $('input').val();
+ 	localStorage.setItem('username', username);
+		database.ref('users/'+ username).set({
+    	username: username
+    });
+
+
+ 	finishedCurrentView();
+ 	return false;
+};
+
+showDiv(".username")
+startCurrentView();
