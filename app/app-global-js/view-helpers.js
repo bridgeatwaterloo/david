@@ -40,8 +40,10 @@ function finishedCurrentView() {
 
 function startLoadingAnimation() {
 
-}
+  $('body').append('<div class="loading-animation-container"><div class="loading-animation"><div class="ball"></div><div class="ball"></div><div class="ball"></div><div class="ball"></div><div class="ball"></div><div class="ball"></div><div class="ball"></div></div></div>');
 
+}
+ 
 /*
 
   stopLoadingAnimation
@@ -51,7 +53,7 @@ function startLoadingAnimation() {
 */
 
 function stopLoadingAnimation() {
-
+  $('.loading-animation').remove();
 }
 
 //function to set the currentview in local storage
