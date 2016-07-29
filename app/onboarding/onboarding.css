@@ -5,7 +5,10 @@
     margin-top: 5rem;
 }
 
+.submit-checkin{
+  background-color: rgba(39, 48, 178, 1);
 	/*Code for pulse effect for Epoq logo*/
+}
 
 div p{
   height: 10%;
@@ -30,6 +33,10 @@ body {
     transform: scale(1.5);
     background-color: rgba(39, 48, 178, 1);
   }*/
+}
+button{
+  background-color: rgba(39, 48, 178, 1);
+  color: rgb(200, 200, 200);
 }
 
 .imguy{
