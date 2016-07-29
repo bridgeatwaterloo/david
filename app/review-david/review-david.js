@@ -1,0 +1,2 @@
+startCurrentView();
+finishedCurrentView();

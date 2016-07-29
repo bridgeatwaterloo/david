@@ -1,6 +1,5 @@
 var targetPosition;
-var currentView = window.location.pathname;
-setView(currentView);
+startCurrentView();
 $( "#draggable" ).draggable({ containment: "#containment-wrapper", scroll: false , 
 	drag: function(){
             // var offset = $(this).offset();

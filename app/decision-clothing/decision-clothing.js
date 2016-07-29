@@ -3,9 +3,13 @@ $('.btn-jacket').click(processClothingDecision)
 $('.btn-tie').click(processClothingDecision)
 $('.btn-trousers').click(processClothingDecision)
 
+var username = getUsername();
+$('.username').html(username);
+
+startCurrentView();
 
 function processClothingDecision() {
-	var username = getUsername();
+
 	var answer = $(this).attr('data-answer');
 	if (answer === "Shoes") {
 		alert("Answered shoes!")
@@ -19,4 +23,5 @@ function processClothingDecision() {
 	database.ref('clothing-decision/').update({
   	[username]: answer
  	});
+ 	finishedCurrentView();
 }
