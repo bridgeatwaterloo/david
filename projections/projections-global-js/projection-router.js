@@ -15,7 +15,7 @@ firebase.database().ref('view').on('value', function(snapshot) {
 		   		//code block
 		   		break;
 		   case "/app/david-to-life/" :
-		   		showView('.david-to=life');
+		   		showView('.david-to-life');
 		   		//code block
 		   		break;
 		   case "/app/decision-where-david/" :
