@@ -1,53 +1,57 @@
-@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-
-fieldset, label { margin: 0; padding: 0; }
-body{ margin: 20px; }
-h1 { font-size: 1.5em; margin: 10px; }
-
-
-/****** Style Star Rating Widget *****/
 
 h1{
-  color: blue;
-  font-size: 500%
-  margin-top: 5rem;
-  margin-left: 25%;
-  }
-fieldset{
-    padding-left: 34%;
-    font-size: 350%
+  text-align: center;
+  margin-top: 2%;
 }
-.rating { 
-  border: none;
-  float: left;
+.txt-center {
+  text-align: center;
+  margin-left: 30%;
+}
+.hide {
+  display: none;
 }
 
-.rating > input { display: none; } 
-.rating > label:before { 
-  margin: 5px;
-  font-size: 1.25em;
-  font-family: FontAwesome;
-  display: inline-block;
-  content: "\f005";
+.clear {
+  float: none;
+  clear: both;
 }
 
-.rating > .half:before { 
-  content: "\f089";
-  position: absolute;
+.rating {
+    width: 90px;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+    position: relative;
+    margin-left: 10%
 }
 
-.rating > label { 
-  color: #ddd; 
- float: right; 
+.rating > label {
+    float: right;
+    display: inline;
+    padding: 0;
+    transform: scale(2);
+    margin: 0;
+    position: relative;
+    width: 1.1em;
+    cursor: pointer;
+    color: #000;
 }
 
-/***** CSS Magic to Highlight Stars on Hover *****/
+.rating > label:hover,
+.rating > label:hover ~ label,
+.rating > input.radio-btn:checked ~ label {
+    color: transparent;
+}
 
-.rating > input:checked ~ label, /* show gold star when clicked */
-.rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+.rating > label:hover:before,
+.rating > label:hover ~ label:before,
+.rating > input.radio-btn:checked ~ label:before,
+.rating > input.radio-btn:checked ~ label:before {
+    content: "\2605";
+    position: absolute;
+    left: 0;
+    color: #FFD700;
+}
 
-.rating > input:checked + label:hover, /* hover current star when changing rating */
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
+
