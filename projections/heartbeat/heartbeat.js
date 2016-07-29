@@ -1,8 +1,8 @@
+var speed = 4000;
 
 function startHeartbeat() {
 
-  var speed = 4000;
-
+  
   function animateRight() {
   $(".heartbeat-right-overlay").animate({
       width: "0%"
