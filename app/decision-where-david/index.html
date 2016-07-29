@@ -3,49 +3,45 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>David: Get ready</title>
+    <title>David: Where should David go?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/app/app-global-css/bootstrap.css">
     <link rel="stylesheet" href="/app/app-global-css/html5-boilerplate.css">
     <link rel="stylesheet" href="/app/app-global-css/david.css">
-    <link rel="stylesheet" href="/app/holding/holding.css">
+    <link rel="stylesheet" href="/app/decision-where-david/decision-where-david.css">
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
-  <body class="holding">
+  <body class="decision-where-david">
 
     <nav class="navbar navbar-light bg-faded navbar-fixed-top">
       <div class="container">
-        David
+        David: Where should David go?
       </div>
     </nav>
 
     <div class="container david-container">
-
-      <section class="view">
-        <div class="card text-xs-center">
-          <div class="card-header">
-            Please wait...
-          </div>
-          <div class="card-block">
-            <h4 class="card-title">Please confirm</h4>
-            <p class="card-text geolocation-message">Please tap the button below when the projector gives you the sign that we need your input</p>
-            <a href="#" class="btn btn-primary load-next-view">Go</a>
-          </div>
+    <h4>Drag and drop David</h4>
+    <div id="containment-wrapper">
+        <div id="draggable" class="ui-widget-content">
+            <img src="David.jpg" class = "image" >
         </div>
-
-      </section>
+    </div>
+    
+    <button type="button" class="btn btn-secondary submit">Submit</button>
 
     </div><!-- end of .david-container -->
 
-    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
     <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-
+    <script src="jquery.ui.touch-punch.js"></script>
     <script src="/js/vendor/tether.js"></script>
     <script src="/js/vendor/bootstrap.js"></script>
-    <script src="/app/app-global-js/view-helpers.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
     <script src="/app/app-global-js/firebase-helpers.js"></script>
-    <script src="/app/holding/holding.js"></script>
+    <script src="/app/app-global-js/view-helpers.js"></script>
+    <script src="/app/decision-where-david/decision-where-david.js"></script>
 
   </body>
 </html>

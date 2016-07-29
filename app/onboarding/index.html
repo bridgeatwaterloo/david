@@ -1,0 +1,84 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>David: Onboarding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/app/app-global-css/bootstrap.css">
+    <link rel="stylesheet" href="/app/app-global-css/html5-boilerplate.css">
+    <link rel="stylesheet" href="/app/app-global-css/david.css">
+    <link rel="stylesheet" href="/app/onboarding/onboarding.css">
+    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body class="view-name">
+
+    <nav class="navbar navbar-light bg-faded navbar-fixed-top">
+      <div class="container">
+        David
+      </div>
+    </nav>
+
+    <div class="container david-container">
+
+      <section class="view">
+
+        <div class="card text-xs-center">
+          <div class="card-header">
+            Login
+          </div>
+          <div class="card-block">
+            <h4 class="card-title">Welcome to David</h4>
+            <p class="card-text">What would you like your username to be?</p>
+
+            <!-- a form with an input -->
+            <form class="form-set-username" >
+              <input type="text" class="form-control" name="datalabel" placeholder="Choose your username">
+            </form>
+
+          </div>
+        </div>
+
+        <div class="card text-xs-center">
+          <div class="card-header">
+            Onboarding
+          </div>
+          <div class="card-block">
+            <h4 class="card-title">The David set up</h4>
+            <p class="card-text geolocation-message">David requires audience decisions to function. Using Epoq technology, we are able to program your choices into David, making him as suited to you as possible.</p>
+            <img src="/app/epoq_logo-icon_WHITE.svg" class="imguy">
+            <p>When you see this icon appear on the screen, you can make a choice on your phone. When a decision is made david is infromed and he will be instructed to perform a dance based on your choice.</p>
+
+            <p>You are in control of David.</p>
+
+            <a href="/app/david-to-life" class="btn btn-primary submit-checkin">Join David</a>
+          </div>
+        </div>
+
+      </section>
+
+    </div><!-- end of .david-container -->
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCyR0kEZZHbteODP2xAnSplh5GZquj7_lY",
+        authDomain: "davidtolife.firebaseapp.com",
+        databaseURL: "https://davidtolife.firebaseio.com",
+        storageBucket: "davidtolife.appspot.com",
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <script src="/js/vendor/tether.js"></script>
+    <script src="/js/vendor/bootstrap.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+    <script src="/app/app-global-js/firebase-helpers.js"></script>
+    <script src="/app/app-global-js/view-helpers.js"></script>
+    <script src="/app/onboarding/onboarding.js"></script>
+
+  </body>
+</html>
