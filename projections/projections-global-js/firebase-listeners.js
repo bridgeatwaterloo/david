@@ -160,3 +160,24 @@ firebase.database().ref('clicks').on('value', function(snapshot){
 
 
 });
+
+firebase.database().ref('decision-want-more').on('value', function(snapshot){
+	var numberOfNo=0;
+	var numberOfYes=0;
+	snapshot.forEach(function(data){
+		//console.log(data.key + ": " +data.val() );
+		if(data.val()==="Yes"){
+			numberOfYes++;
+		}else{
+			numberOfNo++;
+		}
+	});
+
+	//console.log("yes:" +numberOfYes);
+	if(numberOfYes>numberOfNo){
+		$(".decision-want-more-result").html("YES");
+	}else{
+		$(".decision-want-more-result").html("NO");
+	}
+});
+
