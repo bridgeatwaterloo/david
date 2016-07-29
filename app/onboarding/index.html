@@ -25,9 +25,9 @@
 
         <div class="card text-xs-center">
           <div class="card-header">
-            Login
+            Onboarding
           </div>
-          <div class="card-block">
+          <div class="username all">
             <h4 class="card-title">Welcome to David</h4>
             <p class="card-text">What would you like your username to be?</p>
 
@@ -35,29 +35,35 @@
             <form class="form-set-username" >
               <input type="text" class="form-control" name="datalabel" placeholder="Choose your username">
             </form>
+            
 
           </div>
-        </div>
 
-        <div class="card text-xs-center">
-          <div class="card-header">
-            Onboarding
-          </div>
-          <div class="card-block">
+          <div class="prep all">
             <h4 class="card-title">The David set up</h4>
-            <p class="card-text geolocation-message">David requires audience decisions to function. Using Epoq technology, we are able to program your choices into David, making him as suited to you as possible.</p>
+            <p class="card-text geolocation-message">Epoq requires you make some preparation before building David. Please remove auto lock on your phone. Please turn up the brightness and set the sound to silent. Please do not browse privately or incognito.</p>
+            <button type="button" class="btn btn-prep btn-all btn-primary submit-checkin">Enter</button>
+  
+          </div>
+
+          <div class="instruction all">
+            
+            <h4 class="card-title">How it works</h4>
+            
+            <p>In order to build and control David you will work together with the rest of the audience. The majority will rule in some scenes, in others the responsibility will be handed to a single person.</p>
             <img src="/app/epoq_logo-icon_WHITE.svg" class="imguy">
-            <p>When you see this icon appear on the screen, you can make a choice on your phone. When a decision is made david is infromed and he will be instructed to perform a dance based on your choice.</p>
 
-            <p>You are in control of David.</p>
+            <p>When you see this pulsing image on your screen and you hear the slot machine sounds its time to look at your phone. At all other times we encourgage you to look at David and see how your creation is coming to life.</p>
+            
+            <button type="button" class="btn btn-instruction btn-all btn-primary submit-checkin">Join David</button>
 
-            <a href="/app/david-to-life" class="btn btn-primary submit-checkin">Join David</a>
           </div>
         </div>
 
       </section>
 
     </div><!-- end of .david-container -->
+
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.12.0.min.js"><\/script>')</script>

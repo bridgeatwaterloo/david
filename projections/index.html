@@ -16,31 +16,18 @@
   <body>
 
     <div class="panel panel-left">
-
+        <canvas style="width: 100%">
+          <div class="txtStyle">Bring David to life</div>
+      </canvas>
     </div><!-- / END .panel-left-->
 
     <div class="panel panel-center">
 
+<!-- <div class="glitch" data-text="GLITCH">David</div>
+ -->
       <section class="view view-indicator">
 
        <img src="epoq_logo-icon_WHITE.svg" class="imguy indicator">
-
-      </section><!-- / .view-indicator -->
-
-      <section class="view view-onboarding">
-
-
-      </section><!-- / .view-indicator -->
-
-
-      <section class=" view view-decision-result">
-
-        <div class="heartbeat">
-
-          <h1>You chose:</h1>
-          <p>Result</p>
-
-        </div>
 
       </section><!-- / .view-indicator -->
 
@@ -54,7 +41,6 @@
         </div>
 
       </section>
-
 
        <section class="view onboarding">
 
@@ -116,25 +102,12 @@
 
         <div>
 
-          <h1>You chose:</h1>
-          <p class = decision-where-david>Result</p>
+          <h1><span class="decision-where-david-name">You</span> chose:</h1>
+          <p class="decision-where-david-result" >Result</p>
 
         </div>
 
       </section>
-
-
-       <section class="view decision-reason-for-david-to-move">
-
-        <div>
-
-          <h1>You chose:</h1>
-          <p>Result</p>
-
-        </div>
-
-      </section>
-
 
        <section class="view warning">
 
@@ -153,7 +126,7 @@
         <div>
 
           <h1>You chose:</h1>
-          <p class = "decision-clothing-result" >Result</p>
+          <p class="decision-clothing-result" >Result</p>
 
         </div>
 
@@ -165,83 +138,12 @@
         <div>
 
           <h1>You chose:</h1>
-          <p>Result</p>
+          <p class="decision-emotion-result">Result</p>
 
         </div>
 
       </section>
 
-
-       <section class="view slider-horizontal">
-
-        <div>
-
-          <h1>You chose:</h1>
-          <p>Result</p>
-
-        </div>
-
-      </section>
-
-
-       <section class="view slider-vertical">
-
-        <div>
-
-          <h1>You chose:</h1>
-          <p>Result</p>
-
-        </div>
-
-      </section>
-
-
-       <section class="view calculating-results">
-
-        <div>
-
-          <h1>You chose:</h1>
-          <p>Result</p>
-
-        </div>
-
-      </section>
-
-
-       <section class="view done">
-
-        <div>
-
-          <h1>You chose:</h1>
-          <p>Result</p>
-
-        </div>
-
-      </section>
-
-
-       <section class="view percentage-of-vote">
-
-        <div>
-
-          <h1>You chose:</h1>
-          <p>Result</p>
-
-        </div>
-
-      </section>
-
-
-       <section class="view pay-attention">
-
-        <div>
-
-          <h1>You chose:</h1>
-          <p>Result</p>
-
-        </div>
-
-      </section>
 
 
        <section class="view decision-want-more">
@@ -249,19 +151,7 @@
         <div>
 
           <h1>You chose:</h1>
-          <p>Result</p>
-
-        </div>
-
-      </section>
-
-
-       <section class="view time-left-with-david">
-
-        <div>
-
-          <h1>You chose:</h1>
-          <p>Result</p>
+          <p class="decision-want-more-result">Result</p>
 
         </div>
 
@@ -273,7 +163,7 @@
         <div>
 
           <h1>You chose:</h1>
-          <p>Result</p>
+          <p class="decision-are-you-finished-result">Result</p>
 
         </div>
 
@@ -291,46 +181,16 @@
 
       </section>
 
-
-       <section class="view review-how-was-david">
-
-        <div>
-
-          <h1>You chose:</h1>
-          <p>Result</p>
-
-        </div>
-
-      </section>
-
-
-       <section class="view review-would-you-see-david-again">
-
-        <div>
-
-          <h1>You chose:</h1>
-          <p>Result</p>
-
-        </div>
-
-      </section>
-
-
-       <section class="view review-thank-you">
-
-        <div>
-
-          <h1>You chose:</h1>
-          <p>Result</p>
-
-        </div>
-
-      </section>
-
-
     </div><!-- / END .panel-left-->
 
     <div class="panel panel-right">
+        <canvas style="width: 100%">
+          <div class="txtStyle">Bring to life</div>
+      </canvas>
+    </div>
+
+
+
 
     </div><!-- / END .panel-left-->
 
@@ -346,12 +206,10 @@
     <script src="/projections/projections-global-js/firebase-helpers.js"></script>
     <script src="/projections/projections-global-js/firebase-listeners.js"></script>
     <script src="/projections/projections-global-js/projections-helpers.js"></script>
-
-
     <script src="/projections/indicator/indicator.js"></script>
+    <script src="/projections/projections-global-js/output-writing.js"></script>
     <script src="/projections/heartbeat/heartbeat.js"></script>
     <script src="/projections/projections-global-js/projection-router.js"></script>
-
 
   </body>
 </html>
