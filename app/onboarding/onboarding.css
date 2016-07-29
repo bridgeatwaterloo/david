@@ -7,6 +7,10 @@
 
 	/*Code for pulse effect for Epoq logo*/
 
+button{
+  background-color: rgba(39, 48, 178, 1);
+}
+
 div p{
   height: 10%;
 }
@@ -23,13 +27,6 @@ body {
     background-color: rgba(39, 48, 178, 1);
     border-radius: 100%;
   }
-/*  50% {
-    background-color: rgb(200, 200, 200);
-  }
-  100% {
-    transform: scale(1.5);
-    background-color: rgba(39, 48, 178, 1);
-  }*/
 }
 
 .imguy{
