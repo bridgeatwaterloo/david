@@ -1,7 +1,7 @@
 // Initialization functions:
 
 function initializeHeartbeat() {
-	showView('.david-to-life');
+	showIndicatorView('.david-to-life');
 	startHeartbeat();
 }
 
@@ -14,10 +14,10 @@ firebase.database().ref('view').on('value', function(snapshot) {
 	       		break;
 		   case "/app/onboarding/" :
 		   		//code block
-		   		showView('.onboarding');
+		   		showView('.view-onboarding');
 		   		break;
 		   case "/app/decision-are-you-happy/" :
-		   		showView('.decision-are-you-happy');
+		   		showIndicatorView('.decision-are-you-happy');
 		   		//code block
 		   		break;
 		   case "/app/david-to-life/" :
@@ -25,7 +25,7 @@ firebase.database().ref('view').on('value', function(snapshot) {
 		   		//code block
 		   		break;
 		   case "/app/decision-where-david/" :
-		   		showView('.decision-where-david');
+		   		showIndicatorView('.decision-where-david');
 		   		//code block
 		   		break;
 		   case "/app/warning/" :
@@ -33,23 +33,23 @@ firebase.database().ref('view').on('value', function(snapshot) {
 		   		//code block
 		   		break;
 		   case "/app/decision-clothing/" :
-		   		showView('.decision-clothing');
+		   		showIndicatorView('.decision-clothing');
 		   		//code block
 		   		break;
 		   case "/app/decision-emotion/" :
-		   		showView('.decision-emotion');
+		   		showIndicatorView('.decision-emotion');
 		   		//code block
 		   		break;
 		   case "/app/decision-want-more/" :
-		   		showView('.decision-want-more');
+		   		showIndicatorView('.decision-want-more');
 		   		//code block
 		   		break;
 		   case "/app/decision-are-you-finished/" :
-		   		showView('.decision-are-you-finished');
+		   		showIndicatorView('.decision-are-you-finished');
 		   		//code block
 		   		break;
 		   case "/app/review-david" :
-		   		showView('.review-david');
+		   		showIndicatorView('.review-david');
 		   		//code block
 		   		break;
 			default:
