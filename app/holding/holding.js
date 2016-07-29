@@ -9,11 +9,6 @@ function checkNextView() {
   // get previous view from local storage
   previousView = getView();
 
-
-
-
-
-
   console.log(nextview, previousView);
 
   // if the next view is not the same as the previous view then go to the next view
