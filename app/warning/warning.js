@@ -1,2 +1,7 @@
 startCurrentView();
-finishedCurrentView();
+
+$('.go').click(go);
+
+function go() {
+	finishedCurrentView();
+}
