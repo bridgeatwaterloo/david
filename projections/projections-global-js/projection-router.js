@@ -5,9 +5,6 @@ function initializeHeartbeat() {
 	startHeartbeat();
 }
 
-
-
-
 firebase.database().ref('view').on('value', function(snapshot) {
 	view = snapshot.val().currentView;
 	  switch(view) {
@@ -100,14 +97,9 @@ firebase.database().ref('view').on('value', function(snapshot) {
 		   		//code block
 		   		break;
 			default:
-	 		
+
 	}
 });
-
-
-
-
- 
 
 firebase.database().ref('decisions').on('value', function(snapshot){
 
@@ -133,5 +125,4 @@ firebase.database().ref('decisions').on('value', function(snapshot){
 		$(".decision-are-you-happy-result").html("NO");
 	}
 });
-
 
