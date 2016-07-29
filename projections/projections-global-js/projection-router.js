@@ -1,7 +1,7 @@
 // Initialization functions:
 
 function initializeHeartbeat() {
-	showView('.david-to-life');
+	showIndicatorView('.david-to-life');
 	startHeartbeat();
 }
 
@@ -10,14 +10,16 @@ firebase.database().ref('view').on('value', function(snapshot) {
 	  switch(view) {
 	       case "/app/checkin/" :
 	       		//code block
+	       		console.log("test")
+	       		//showIndicatorView('.checkin');
 	       		showView('.checkin');
 	       		break;
 		   case "/app/onboarding/" :
 		   		//code block
-		   		showView('.onboarding');
+		   		showView('.view-onboarding');
 		   		break;
 		   case "/app/decision-are-you-happy/" :
-		   		showView('.decision-are-you-happy');
+		   		showIndicatorView('.decision-are-you-happy');
 		   		//code block
 		   		break;
 		   case "/app/david-to-life/" :
@@ -25,7 +27,7 @@ firebase.database().ref('view').on('value', function(snapshot) {
 		   		//code block
 		   		break;
 		   case "/app/decision-where-david/" :
-		   		showView('.decision-where-david');
+		   		showIndicatorView('.decision-where-david');
 		   		//code block
 		   		break;
 		   case "/app/decision-reason-for-david-to-move/" :
