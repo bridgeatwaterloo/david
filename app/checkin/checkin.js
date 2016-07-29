@@ -1,9 +1,7 @@
 // When the user clicks the button
 $('.submit-checkin').click(processCheckin);
 
-
-var currentView = window.location.pathname;
-setView(currentView);
+startCurrentView();
 
 function processCheckin() {
   // Start by checking if geolocation is available
@@ -28,8 +26,9 @@ function processCheckin() {
 
       // Our logic. If the distance between our user and the target is less than 100m, show the login screen, else update the view with a helpful message
       if (distance < 1000) {
-        //go to the holding view
-        finishedCurrentView();
+
+      window.location.href = '/app/onboarding/';
+
       } else {
         $('p.geolocation-message').html('Please try again when you get to the Southbank Centre');
       }

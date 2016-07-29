@@ -18,21 +18,23 @@
         David: Clothing
       </div>
     </nav>
-
-    <div class="container david-container">
-
-      <section class="view view-decision-clothing">
-        <div class="card text-xs-center">
-          <div class="card-header">
-            What clothing should David wear?
+     <div class="container david-container">
+      <div class="card text-xs-center">
+        <div class="card-header">What clothing should David wear, <span class="username"> @username</span>?
+        </div> 
+          <div class="card-block">
+            <div class="btn-group">
+            <form>
+              <button type="button" class="btn btn-shoes" data-answer = "Shoes">Shoes</button>
+              <button type="button" class="btn btn-jacket" data-answer = "Jacket">Jacket</button>
+              <button type="button" class="btn btn-tie" data-answer = "Tie">Tie</button>
+              <button type="button" class="btn btn-trousers" data-answer = "Trousers">Trousers</button>
+              </form>
+            </div>
           </div>
-
-        </div>
-
-      </section>
-
-    </div><!-- end of .david-container -->
-
+        </div>  
+      </div> <!-- End of david-container -->
+      
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
     <script src="/js/vendor/tether.js"></script>

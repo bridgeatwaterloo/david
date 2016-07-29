@@ -15,26 +15,31 @@
 
     <nav class="navbar navbar-light bg-faded navbar-fixed-top">
       <div class="container">
-        David: Where should David go?
+        David: Where?
       </div>
     </nav>
 
-    <div class="container david-container">
-
-      <section class="view view-decision-where-david">
-        <div class="card text-xs-center">
-          <div class="card-header">
-            Where should david go?
-          </div>
-
+    <div class="container david-container david-where">
+      <div class="card text-xs-center">
+        <div class="card-header">
+        Where should David go?
         </div>
-
-      </section>
+        <h4>Drag and drop David</h4>
+      </div>
+     <div id="containment-wrapper">
+        <div id="draggable" class="ui-widget-content">
+            <img src="David.jpg" class = "image" >
+        </div>
+     </div>
+    
+    <button type="button" class="btn btn-secondary submit">Submit</button>
 
     </div><!-- end of .david-container -->
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
     <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <script src="jquery.ui.touch-punch.js"></script>
     <script src="/js/vendor/tether.js"></script>
     <script src="/js/vendor/bootstrap.js"></script>
 
