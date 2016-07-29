@@ -12,7 +12,7 @@ function processBeat() {
   	}); // updates the databases click record with the users name and current number of taps
 
   	if(noOfTaps === 10){
-  	database.ref('gotToTenTaps/').update({
+  	database.ref('david-to-life/').update({
     [username]:"Yes"
   	}); // if the number of taps gets to 10 then their name is added to the gotToTenTaps record so that their name can be projected
       finishedCurrentView();

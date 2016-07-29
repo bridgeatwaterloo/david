@@ -15,7 +15,7 @@ function processDecision() {
 	} else {
 		alert("Answered no!")
 	}
-	database.ref('more-decision/').update({
+	database.ref('decision-want-more/').update({
   	[username]: answer
  	});
  	finishedCurrentView();
