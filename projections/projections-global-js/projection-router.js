@@ -5,9 +5,6 @@ function initializeHeartbeat() {
 	startHeartbeat();
 }
 
-
-
-
 firebase.database().ref('view').on('value', function(snapshot) {
 	view = snapshot.val().currentView;
 	  switch(view) {
@@ -100,38 +97,7 @@ firebase.database().ref('view').on('value', function(snapshot) {
 		   		//code block
 		   		break;
 			default:
-	 		
+
 	}
 });
-
-
-
-
- 
-
-firebase.database().ref('decisions').on('value', function(snapshot){
-
-	// console.log(snapshot.);
-	// console.log(snapshot.val());
-	// var data = snapshot.exportVal()
-	// console.log(data);
-	var numberOfNo=0;
-	var numberOfYes=0;
-	snapshot.forEach(function(data){
-		console.log(data.key + ": " +data.val() );
-		if(data.val()==="Yes"){
-			numberOfYes++;
-		}else{
-			numberOfNo++;
-		}
-	});
-
-	console.log("yes:" +numberOfYes);
-	if(numberOfYes>numberOfNo){
-		$(".decision-are-you-happy-result").html("YES");
-	}else{
-		$(".decision-are-you-happy-result").html("NO");
-	}
-});
-
 
