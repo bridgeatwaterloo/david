@@ -29,7 +29,7 @@ $('.submit').click(submit);
 function processPosition(xPos, yPos, parentWidth, parentHeight) {
     const horizRegions = 3;
     const vertRegions = 3;
-    const positionNames = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    const positionNames = ["Back-left", "Back", "Back-Right", "Left", "Centre", "Right", "Front-Left", "Front", "Front-Right"];
     var column = Math.floor(xPos / (parentWidth / horizRegions));
     var row = Math.floor(yPos / (parentHeight / vertRegions));
     var positionIndex = row * horizRegions + column;
