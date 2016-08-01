@@ -26,3 +26,8 @@
 .david-where{
 	margin-top: 50px;
 }
+.btn{
+	border-width: 3px;
+	border-color: green;
+	color: blue;
+}
