@@ -53,6 +53,7 @@ function startLoadingAnimation() {
 */
 
 function stopLoadingAnimation() {
+  $('.loading-animation-container').remove();
   $('.loading-animation').remove();
 }
 
