@@ -19,6 +19,14 @@ body {
   z-index: 10;
 }
 
+.panel-center h1{
+  font-family: helvetica;
+  font-size: 4vw;
+}
+.panel-center p{
+  font-family: helvetica;
+  font-size: 4vw;
+}
 /*
   Hide all views by default
 */
