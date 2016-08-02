@@ -6,7 +6,7 @@
 
 
 
-
+// function to write message on side panels
 function myMsg(message){
 	// return txt;
 
@@ -20,7 +20,7 @@ function myMsg(message){
 	function animateWords(ctx) {
 		var dashLen = 120, dashOffset = dashLen, speed = 5,
 	    txt = message, x = 1, i = 0;
-		ctx.font = "40px Helvetica, cursive, TSCu_Comic, sans-serif"; 
+		ctx.font = "40px Helvetica"; 
 		ctx.lineWidth = 5; ctx.lineJoin = "round"; ctx.globalAlpha = 2/3;
 		ctx.strokeStyle = ctx.fillStyle = "#1f2f90";
 
@@ -41,6 +41,16 @@ function myMsg(message){
 		  }
 		})();
 	}
+}
+
+//function to clear side panels
+function clearMsg(){
+	var canvases = document.querySelectorAll("canvas");
+
+	for (var i=0; i<canvases.length; i++) {
+		var ctx = canvases[i].getContext("2d");
+	 	ctx.clearRect(0, 0, canvases[i].width, canvases[i].height);
+	 }
 }
 
 
