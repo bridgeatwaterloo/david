@@ -1,4 +1,4 @@
-var coin = new Audio('coin.mp3');
+var coin = new Audio('Coin.mp3');
 
 function showIndicatorView(view) {
   $('.view').hide();
