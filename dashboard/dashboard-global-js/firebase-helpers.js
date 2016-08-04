@@ -13,7 +13,7 @@ function setupFirebase(){
   var config = {
     apiKey: "AIzaSyBl1i8P3m__Yp7Y-Hq-6XbOOaC232muFSw",
     authDomain: "david-app-official.firebaseapp.com",
-    databaseURL: "https://david-app-test.firebaseio.com",
+    databaseURL: "https://david-app-official.firebaseio.com",
     storageBucket: "david-app-test.appspot.com",
   };
   firebase.initializeApp(config);
