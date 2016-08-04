@@ -7,6 +7,5 @@ function showIndicatorView(view) {
   setTimeout(function() {
   	$(view).show();
   	$('.view-indicator').hide();
-  }, 3000);
+  }, 2500);
  }
-
