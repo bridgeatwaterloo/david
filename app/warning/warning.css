@@ -1,1 +1,6 @@
 /* Any view-specific CSS goes in here */
+.btn{
+	border-width: 3px;
+	border-color: green;
+	color: blue;
+}
