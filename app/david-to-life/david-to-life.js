@@ -6,9 +6,9 @@ startCurrentView();
 $('.btn-heartbeat').click(processBeat); // listens for how many times the user clicks the heart and calls the process beat function
 
 //listening for the value of the current view field in firebase to change
-firebase.database().ref('view/heartbeatLevel').on('value', function(snapshot) {
+firebase.database().ref('heartbeat/level').on('value', function(snapshot) {
   var heartbeatLevel = snapshot.val();
-  
+
   if(heartbeatLevel === 5){
     startLoadingAnimation();
     finishedCurrentView(1000);
@@ -27,6 +27,6 @@ function processBeat() {
   function () {
       $(this).removeClass('pulse');
   });
-  
+
 } // close the function
 

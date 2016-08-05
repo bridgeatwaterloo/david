@@ -25,7 +25,7 @@ firebase.database().ref('decision-are-you-happy').on('value', function(snapshot)
 firebase.database().ref('decision-clothing').on('value', function(snapshot){
 	var list ={
 		"Tie": 0,
-		"Shoes" : 0, 
+		"Shoes" : 0,
 		"Jacket" : 0,
 		"Trousers" :0,
 	}
@@ -64,7 +64,7 @@ firebase.database().ref('decision-clothing').on('value', function(snapshot){
 firebase.database().ref('decision-emotion').on('value', function(snapshot){
 	var list ={
 		"Unhappy": 0,
-		"Joyfull" : 0, 
+		"Joyfull" : 0,
 		"Needy" : 0,
 		"Frustrated" :0,
 		"Appathetic" :0
@@ -149,7 +149,10 @@ firebase.database().ref('clicks').on('value', function(snapshot){
 	});
 	//console.log(clicks);
 	const maxClicksPerUser = 25;
-	var clicksPerUser = clicks/users/maxClicksPerUser;
+	var clicksPerUser = 0;
+	if (users > 0) {
+		clicksPerUser = clicks/users/maxClicksPerUser;
+	}
 	var level = 0;
 	if (clicksPerUser < 0.25){
 		speed=4000;
@@ -168,8 +171,9 @@ firebase.database().ref('clicks').on('value', function(snapshot){
 		level = 5;
 	}
 
-	database.ref('view/').update({
-		heartbeatLevel: level
+
+	database.ref('heartbeat/').update({
+		level: level
 	});
 });
 
