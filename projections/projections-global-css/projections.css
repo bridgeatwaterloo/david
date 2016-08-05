@@ -44,7 +44,7 @@ body {
   text-align: center;
   text-shadow: 2px 2px 2px #333;
   -webkit-animation-name: increase;
-  -webkit-animation-duration: 4s; 
+  -webkit-animation-duration: 4s;
   animation-name: increase;
   animation-duration: 4s;
 }

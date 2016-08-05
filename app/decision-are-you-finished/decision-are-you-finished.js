@@ -7,13 +7,9 @@ function processDecision() {
 	var username = getUsername();
 	console.log(username)
 	var answer = $(this).attr('data-answer');
-	if (answer === "Yes") {
-		alert("Answered yes!")
-	} else {
-		alert("Answered no!")
-	}
+	startLoadingAnimation("Answered " + answer.toLowerCase() + "!");
 	database.ref('decision-are-you-finished/').update({
-  	[username]: answer
+  		[username]: answer
  	});
- 	finishedCurrentView();
+ 	finishedCurrentView(1000);
 }

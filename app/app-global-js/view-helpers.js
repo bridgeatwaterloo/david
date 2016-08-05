@@ -25,8 +25,29 @@ setView(currentView);
 
 
 //method that transfers view to the holding view
-function finishedCurrentView() {
-  window.location.href = '/app/holding';
+function finishedCurrentView(timeout) {
+  if (!timeout) {
+    timeout = 0;
+  }
+  setTimeout(function() {
+    window.location.href = '/app/holding';
+  }, timeout);
+}
+
+/*
+
+  finishedOnboarding
+
+  redirects the app to the holding-onboarding page
+
+  should be used when a user has finished with onboarding
+
+*/
+
+
+//method that transfers view to the holding view
+function finishedOnboarding() {
+  window.location.href = '/app/holding-onboarding';
 }
 
 
@@ -38,9 +59,24 @@ function finishedCurrentView() {
 
 */
 
-function startLoadingAnimation() {
+function startLoadingAnimation(messageString) {
+  var messageDiv = '';
+  if (messageString) {
+    messageDiv = '<div class="loading-message"><p class="text-xs-center">' + messageString + '</p></div>';
+  }
 
-  $('body').append('<div class="loading-animation-container"><div class="loading-animation"><div class="ball"></div><div class="ball"></div><div class="ball"></div><div class="ball"></div><div class="ball"></div><div class="ball"></div><div class="ball"></div></div></div>');
+  $('body').append('<div class="loading-animation-container">'
+      + messageDiv +
+      '<div class="loading-animation">\
+        <div class="ball"/>\
+        <div class="ball"/>\
+        <div class="ball"/>\
+        <div class="ball"/>\
+        <div class="ball"/>\
+        <div class="ball"/>\
+        <div class="ball"/>\
+      </div>\
+    </div>');
 
 }
  
