@@ -21,7 +21,7 @@ $('.btn-prep').click(function(){
 
 $('.form-set-username').on('submit', processForm);
 
-$('.btn-instruction').click(finishedCurrentView);
+$('.btn-instruction').click(finishedOnboarding);
 
 // function to run when the form is submitted
 function processForm() {
