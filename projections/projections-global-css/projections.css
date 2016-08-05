@@ -1,9 +1,18 @@
+
+@font-face {
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Dosis'), url(../Dosis/Dosis-Regular.ttf) format('truetype');
+}
+
 /*
   Green background that can be escaped
 */
 body {
   background: green;
 }
+
 
 /*
   Applies to all three panels
@@ -20,15 +29,37 @@ body {
 }
 
 .panel-center h1 {
-  font-family: helvetica;
+  font-family: 'Dosis', helvetica;
   font-size: 4vw;
   color: white;
+  text-align: center;
+  text-shadow: 2px 2px 2px #333;
+
+
 }
 .panel-center p {
-  font-family: helvetica;
+  font-family: 'Dosis', helvetica;
   font-size: 4vw;
   color: white;
+  text-align: center;
+  text-shadow: 2px 2px 2px #333;
+  -webkit-animation-name: increase;
+  -webkit-animation-duration: 4s;
+  animation-name: increase;
+  animation-duration: 4s;
 }
+
+@-webkit-keyframes increase {
+    0%   {font-size: 4vw;}
+    100% {font-size: 6vw;}
+}
+
+@keyframes increase {
+  0%   {font-size: 4vw;}
+  100% {font-size: 6vw;}
+
+}
+
 /*
   Hide all views by default
 */
