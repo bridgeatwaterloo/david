@@ -171,6 +171,10 @@ firebase.database().ref('clicks').on('value', function(snapshot){
 		level = 5;
 	}
 
+	updateLevelCss(level);
+
+	console.log(level);
+
 
 	database.ref('heartbeat/').update({
 		level: level
@@ -197,3 +201,22 @@ firebase.database().ref('decision-want-more').on('value', function(snapshot){
 	}
 });
 
+var previousLevel=0;
+
+function updateLevelCss(level){
+	if(level!=previousLevel){
+		if(level==1){
+			$('.heartbeat-content').addClass('heartbeat-level-1');
+		}else if(level==2){
+			$('.heartbeat-content').addClass('heartbeat-level-2');
+		}else if(level==3){
+			$('.heartbeat-content').addClass('heartbeat-level-3');
+		}else if(level==4){
+			$('.heartbeat-content').addClass('heartbeat-level-4');
+		}else if(level==5){
+			$('.heartbeat-content').addClass('heartbeat-level-5');
+		}
+		previousLevel=level;
+	}
+
+}
