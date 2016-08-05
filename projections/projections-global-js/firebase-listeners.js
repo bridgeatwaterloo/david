@@ -173,7 +173,7 @@ firebase.database().ref('clicks').on('value', function(snapshot){
 
 	updateLevelCss(level);
 
-	console.log(level);
+	//console.log(level);
 
 
 	database.ref('heartbeat/').update({
