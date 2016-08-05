@@ -11,8 +11,14 @@
 */
 body {
   background: black;
+  width: 100%;
+  height: 100%;
 }
 
+html {
+  width: 100%;
+  height: 100%;
+}
 
 /*
   Applies to all three panels
@@ -61,6 +67,9 @@ body {
   0%   {font-size: 4vw;}
   100% {font-size: 6vw;}
 
+}
+section{
+  height: 100%;
 }
 
 /*

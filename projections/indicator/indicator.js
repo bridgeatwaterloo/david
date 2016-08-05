@@ -6,7 +6,7 @@ function showIndicatorView(view) {
 
   $('.view-indicator').show();
   coin.play();
-  if(view!='.decision-want-more'){
+  if(view!='.decision-want-more' && view!='.david-to-life'){
   resultsound.play();
   }
 
