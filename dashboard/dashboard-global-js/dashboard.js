@@ -29,4 +29,10 @@ function processHolding(){
 		database.ref('holding/').update({
 		Holding: 'true'
 		});
+
+		setTimeout(function(){
+			    database.ref('holding/').update({
+    				Holding: 'false'
+    			});
+		}, 3000);
 }
