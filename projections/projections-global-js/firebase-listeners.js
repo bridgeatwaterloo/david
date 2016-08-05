@@ -67,7 +67,7 @@ firebase.database().ref('decision-emotion').on('value', function(snapshot){
 		"Joyfull" : 0,
 		"Needy" : 0,
 		"Frustrated" :0,
-		"Appathetic" :0
+		"Apathetic" :0
 	}
 
 	snapshot.forEach(function(data){
@@ -80,8 +80,8 @@ firebase.database().ref('decision-emotion').on('value', function(snapshot){
 			list.Needy++;
 		}else if (data.val()=="Frustrated"){
 			list.Frustrated++;
-		}else if (data.val()=="Appathetic"){
-			list.Appathetic++;
+		}else if (data.val()=="Apathetic"){
+			list.Apathetic++;
 		}
 	});
 
