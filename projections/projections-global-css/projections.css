@@ -23,11 +23,20 @@ body {
   font-family: helvetica;
   font-size: 4vw;
   color: white;
+  margin: auto;
 }
 .panel-center p {
   font-family: helvetica;
   font-size: 4vw;
   color: white;
+  margin-left: 120px;
+  margin-top: 20px;
+}
+
+.screen-reading {
+width: 100%;
+margin-left: 120px;
+margin-top: 20px;
 }
 /*
   Hide all views by default
