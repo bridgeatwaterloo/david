@@ -11,17 +11,9 @@ startCurrentView();
 function processClothingDecision() {
 
 	var answer = $(this).attr('data-answer');
-	if (answer === "Shoes") {
-		alert("Answered shoes!")
-	} else if (answer === "Jacket") {
-		alert("Answered jacket!")
-	} else if (answer === "Tie") {
-		alert("Answered tie!")
-	} else {
-		alert("Answered Trousers")
-	}
+	startLoadingAnimation("Answered " + answer.toLowerCase() + "!");
 	database.ref('decision-clothing/').update({
-  	[username]: answer
+  		[username]: answer
  	});
- 	finishedCurrentView();
+ 	finishedCurrentView(1000);
 }
