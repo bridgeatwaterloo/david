@@ -12,7 +12,7 @@ firebase.database().ref('view').on('value', function(snapshot) {
 	/*this variables sets the time until the result will be shown on the side panels in miliseconds, after this time the current result
 	is taken (from the html element that holds the result for that view) and is displayed on the side panels using the myMsg function
 	this is only done for the decision views,*/
-	var timeToChoose = 10000;
+	var timeToChoose = 20000;
 
 	  switch(view) {
 		   case "/app/onboarding/" :
@@ -38,7 +38,8 @@ firebase.database().ref('view').on('value', function(snapshot) {
 		   		// function that displays text on side panels after set period of time as described above switch statement
 		   		setTimeout(function() {
 					var word = $('.decision-where-david-result').html();
-			 		myMsg(word);
+					var name = $('.decision-where-david-name').html();
+			 		myMsg(name+" chose "+word);
   				}, timeToChoose);
 		   		//code block
 		   		break;
