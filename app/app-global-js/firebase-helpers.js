@@ -30,5 +30,10 @@ function getFireBaseView(){
 	return localStorage.getItem('nextView');
 }
 
-
+firebase.database().ref('holding').on('value', function(snapshot) {
+  var toHolding = snapshot.val().Holding;
+  if(toHolding ==='true'){
+    finishedCurrentView(1000);
+  }
+});
 

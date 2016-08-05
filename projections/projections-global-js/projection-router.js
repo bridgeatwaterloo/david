@@ -9,10 +9,10 @@ firebase.database().ref('view').on('value', function(snapshot) {
 	view = snapshot.val().currentView;
 	//clear the side panels of any text
 	clearMsg();
-	/*this variables sets the time until the result will be shown on the side panels in miliseconds, after this time the current result 
+	/*this variables sets the time until the result will be shown on the side panels in miliseconds, after this time the current result
 	is taken (from the html element that holds the result for that view) and is displayed on the side panels using the myMsg function
 	this is only done for the decision views,*/
-	var timeToChoose = 60000;
+	var timeToChoose = 20000;
 
 	  switch(view) {
 		   case "/app/onboarding/" :
@@ -38,7 +38,8 @@ firebase.database().ref('view').on('value', function(snapshot) {
 		   		// function that displays text on side panels after set period of time as described above switch statement
 		   		setTimeout(function() {
 					var word = $('.decision-where-david-result').html();
-			 		myMsg(word);
+					var name = $('.decision-where-david-name').html();
+			 		myMsg(name+" chose "+word);
   				}, timeToChoose);
 		   		//code block
 		   		break;
@@ -67,10 +68,12 @@ firebase.database().ref('view').on('value', function(snapshot) {
 		   case "/app/decision-want-more/" :
 		   		showIndicatorView('.decision-want-more');
 		   		// function that displays text on side panels after set period of time as described above switch statement
-		   		setTimeout(function() {
-					var word = $('.decision-want-more-result').html();
-			 		myMsg(word);
-  				}, timeToChoose);
+		   		
+			   		setTimeout(function() {
+						var word = $('.decision-want-more-result').html();
+				 		myMsg(word);
+	  				}, 9000);
+		   		
 		   		//code block
 		   		break;
 		   case "/app/decision-are-you-finished/" :
