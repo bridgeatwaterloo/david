@@ -25,8 +25,13 @@ setView(currentView);
 
 
 //method that transfers view to the holding view
-function finishedCurrentView() {
-  window.location.href = '/app/holding';
+function finishedCurrentView(timeout) {
+  if (!timeout) {
+    timeout = 0;
+  }
+  setTimeout(function() {
+    window.location.href = '/app/holding';
+  }, timeout);
 }
 
 
@@ -38,9 +43,22 @@ function finishedCurrentView() {
 
 */
 
-function startLoadingAnimation() {
-
-  $('body').append('<div class="loading-animation-container"><div class="loading-animation"><div class="ball"></div><div class="ball"></div><div class="ball"></div><div class="ball"></div><div class="ball"></div><div class="ball"></div><div class="ball"></div></div></div>');
+function startLoadingAnimation(messageString) {
+  if (!messageString) {
+    messageString = '';
+  }
+  $('body').append('<div class="loading-animation-container">\
+      <div class="loading-message"><p class="text-xs-center">' + messageString + '</p></div>\
+      <div class="loading-animation">\
+        <div class="ball"/>\
+        <div class="ball"/>\
+        <div class="ball"/>\
+        <div class="ball"/>\
+        <div class="ball"/>\
+        <div class="ball"/>\
+        <div class="ball"/>\
+      </div>\
+    </div>');
 
 }
  
