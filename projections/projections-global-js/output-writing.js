@@ -9,7 +9,7 @@
 // function to write message on side panels
 function myMsg(message){
 	// return txt;
-
+	showView('.view-text');
 	var canvases = document.querySelectorAll("canvas");
 
 	for (var i=0; i<canvases.length; i++) {
@@ -20,9 +20,9 @@ function myMsg(message){
 	function animateWords(ctx) {
 		var dashLen = 120, dashOffset = dashLen, speed = 5,
 	    txt = message, x = 1, i = 0;
-		ctx.font = "40px Helvetica"; 
+		ctx.font = "40px Dosis"; 
 		ctx.lineWidth = 5; ctx.lineJoin = "round"; ctx.globalAlpha = 2/3;
-		ctx.strokeStyle = ctx.fillStyle = "#1f2f90";
+		ctx.strokeStyle = ctx.fillStyle = "#ffffff";
 
 		(function loop() {
 		  ctx.clearRect(x, 0, 60, 150);
