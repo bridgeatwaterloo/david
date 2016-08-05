@@ -14,5 +14,10 @@ function processDecision() {
 	database.ref('decision-want-more/').update({
   		[username]: answer
  	});
- 	finishedCurrentView(1000);
+ 	$('.david-container').hide();
 }
+
+firebase.database().ref('view').on('value', function(snapshot) {
+	stopLoadingAnimation();
+	$('.david-container').show();
+});
