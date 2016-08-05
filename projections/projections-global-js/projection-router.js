@@ -38,7 +38,8 @@ firebase.database().ref('view').on('value', function(snapshot) {
 		   		// function that displays text on side panels after set period of time as described above switch statement
 		   		setTimeout(function() {
 					var word = $('.decision-where-david-result').html();
-			 		myMsg(word);
+					var name = $('.decision-where-david-name').html();
+			 		myMsg(name+" chose "+word);
   				}, timeToChoose);
 		   		//code block
 		   		break;
