@@ -50,6 +50,7 @@ function processCheckin() {
 
 function noGeo(){
 
+    $('p.geolocation-message').html('Enable your geolocation services in settings, and then try again. Ask one of the helpers if you need assistance.');
 }
 
 // http://stackoverflow.com/questions/27928/calculate-distance-between-two-latitude-longitude-points-haversine-formula
