@@ -1,0 +1,100 @@
+/*.location-heading finds all elements in the html that have a class of locationlink
+e.g.  <h2 class="location-heading">H2 content</h2> */
+body {
+	background-image: fixed;
+	margin: 0 auto;
+  font-family: "Helvetica", "Arial", "sans-serif";
+  line-height: 1.5;
+	}
+.home{
+    list-style: none;
+    padding: 0;
+    margin: -7.5vw 1vw 3vw 1vw;
+}
+.home li {
+    display: inline;
+}
+.home li a {
+    padding: 1rem;
+    background:black;
+    color: white;
+}
+.home li a img {
+   width:20px;
+   height:40px;
+   position: fixed;
+}
+.logo {
+  display: inline-block;
+    vertical-align: top;
+    width: 120px;
+    align-items: right;
+    text-align: right;
+}
+.view {
+	background-color: black;
+}
+div .card-header{
+	background-color: white;
+	font-size: 2rem;
+	opacity: 0.4;
+	padding: 0.1em;
+}
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
+header {
+  background-image: url(david.jpg);
+  background-position: center;
+  background-size: 45rem 29rem;
+  padding: 12vw 1vw 1vw 1vw;
+  text-align: center;
+  line-height: 1.2;
+  color: yellow;
+}
+
+header a {
+  border: 1px solid #e81c4f;
+  border-radius: 290486px;
+  color: blue;
+  font-size: 0.6em;
+  letter-spacing: 0.2em;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: none 200ms ease-out;
+  transition-property: color, background;
+}
+header a:hover {
+  background:  #e81c4f;
+  color: white;
+}
+li{
+  list-style: none;
+}
+.web{
+  height: 100%;
+  width: 100%;
+}
+.image{
+  height: 20vw;
+  width: 20vw;
+  margin: 1vw 10vw 1vw 20vw;
+}
+.facebook{
+  margin-left: -5vw;
+}
+.image-link {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+}
+.check{
+  margin: 1vw 1vw 1vw 20vw;
+}
+.strive{
+  margin: 1vw 1vw 1vw 20vw;
+}
+.location{
+  margin: 1vw 1vw 1vw 20vw;
+  color: green;
+}
