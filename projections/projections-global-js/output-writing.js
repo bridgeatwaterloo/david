@@ -22,7 +22,7 @@ function myMsg(message){
 	    txt = message, x = 1, i = 0;
 		ctx.font = "40px Helvetica"; 
 		ctx.lineWidth = 5; ctx.lineJoin = "round"; ctx.globalAlpha = 2/3;
-		ctx.strokeStyle = ctx.fillStyle = "#1f2f90";
+		ctx.strokeStyle = ctx.fillStyle = "#FFFFFF";
 
 		(function loop() {
 		  ctx.clearRect(x, 0, 60, 150);
