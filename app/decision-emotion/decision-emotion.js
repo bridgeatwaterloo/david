@@ -12,19 +12,9 @@ startCurrentView();
 function processEmotionDecision() {
 
 	var answer = $(this).attr('data-answer');
-	if (answer === "Unhappy") {
-		alert("Answered unhappy!")
-	} else if (answer === "Joyful") {
-		alert("Answered joyful!")
-	} else if (answer === "Needy") {
-		alert("Answered needy!")
-	} else if (answer === "Frustrated") {
-		alert("Answered frustrated!")
-	} else {
-		alert("Answered Appathetic")
-	}
+	startLoadingAnimation("Answered " + answer.toLowerCase() + "!");
 	database.ref('decision-emotion/').update({
-  	[username]: answer
+  		[username]: answer
  	});
- 	finishedCurrentView();
+ 	finishedCurrentView(1000);
 }

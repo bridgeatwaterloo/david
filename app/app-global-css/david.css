@@ -21,8 +21,23 @@ html{
 .loading-animation {
   width: 100px;
   height: 100px;
-  padding-top: 220px;
-  margin-left:47%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.loading-message {
+  width: 90%;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  margin: 0 auto;
+  position: relative;
+  top: 40%;
+  transform: translateY(-40%);
+  padding-top: 1.5em;
+  padding-bottom: 0.6em;
 }
 
 .ball {

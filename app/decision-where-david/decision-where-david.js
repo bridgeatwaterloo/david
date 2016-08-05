@@ -39,9 +39,10 @@ function processPosition(xPos, yPos, parentWidth, parentHeight) {
 
 function submit() {
     var username = getUsername();
+    startLoadingAnimation("Answered " + answer.toLowerCase() + "!");
     database.ref('decision-where-david').update({
         [username]: targetPosition
     });
     console.log("David's target position: " + targetPosition);
-    finishedCurrentView();
+    finishedCurrentView(1000);
 }
