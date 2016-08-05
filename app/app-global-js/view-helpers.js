@@ -29,6 +29,22 @@ function finishedCurrentView() {
   window.location.href = '/app/holding';
 }
 
+/*
+
+  finishedOnboarding
+
+  redirects the app to the holding-onboarding page
+
+  should be used when a user has finished with onboarding
+
+*/
+
+
+//method that transfers view to the holding view
+function finishedOnboarding() {
+  window.location.href = '/app/holding-onboarding';
+}
+
 
 /*
 
