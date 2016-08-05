@@ -1,34 +1,5 @@
-# david
-
-The final repository for the David app and projections
-
-index.html is the main app for the audience.
-
-/projections contains the projections view
-
-### Global View names
-
-* checkin
-* holding
-* onboarding
-* david-to-life
-* decision-where-david
-* decision-are-you-happy
-* decision-clothing
-* decision-emotion
-* decision-want-more
-* decision-are-you-finished
-* review-david
-
-Added view names by Machinewarlock
-* decision-reason-for-david-to-move
-* warning
-* done
-* pay-attention
-* percentage-of-vote
-* slider-horizontal
-* slider-vertical
-* time-left-with-david
-* review-how-was-david
-* review-would-you-see-david-again
-* review-thank-you
+The application is to be used by Pell Ensemble, a comtemporany dance company, for their interactive dance performance; David. The app allows the audience to choose the dancer's mood and movement through mobile interaction. The outcome is decided by the application's database taking either the majority or random user. Within a 30 minutes perfomance the audience has the possibility to make over 13 decisions.
+It works by whenever a button is clicked on a question, a function runs which logs which decision the user has chosen and sends it to the user to the holding page. The function starting with CurrentView(); runs on the holding page preventing the user from going back to the question they have just answered.
+A function has been defined which listens to the database which means that whenever there is an input into the database, it will send the data back to this function. The function then processes the data and is able to give the results depending on what the audience member has chosen whether it needs to be a majority or a random user selected. This decision is then projected onto the three screens where the results are then seen by the audience and the dancer himself. Meanwhile the decisions should be seamless and the sound, projections and light all programmed to work on cue.
+The website gives a general overview and detailed information about the David performer. The first input required by the user is an username in order to use it in the projection. After that the projection will display an animated heart monitor line with the caption "Bring David to life". The user needs to input clicks to give a heartbeat to David and based on the average of clicks the speed ot the heartbeat will increase.When David alive the user need to answer if they are happy(yes or not). If yes the decision carries onto the next decision which is David's clothing if not it goes back from the beginner till user answer yes. The dicision on David's clothing will be decided based on majority of their results. Again the audience will be asked from the user if they are happy or not. And the yes decision will carry on the decision to decide David's position. The user need to voted again and the majority will decided where David should go.
+The following question will ask if the audience wants more if yes the shows carry on if not the shows end.
