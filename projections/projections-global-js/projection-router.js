@@ -86,7 +86,8 @@ firebase.database().ref('view').on('value', function(snapshot) {
 		   		//code block
 		   		break;
 		   case "/app/review-david" :
-		   		showIndicatorView('.review-david');
+		   		//no longer want the indicator to show
+		   		showView('.review-david');
 		   		//code block
 		   		break;
 			default:
