@@ -60,12 +60,14 @@ function finishedOnboarding() {
 */
 
 function startLoadingAnimation(messageString) {
-  if (!messageString) {
-    messageString = '';
+  var messageDiv = '';
+  if (messageString) {
+    messageDiv = '<div class="loading-message"><p class="text-xs-center">' + messageString + '</p></div>';
   }
-  $('body').append('<div class="loading-animation-container">\
-      <div class="loading-message"><p class="text-xs-center">' + messageString + '</p></div>\
-      <div class="loading-animation">\
+
+  $('body').append('<div class="loading-animation-container">'
+      + messageDiv +
+      '<div class="loading-animation">\
         <div class="ball"/>\
         <div class="ball"/>\
         <div class="ball"/>\
