@@ -19,20 +19,30 @@
       </div>
     </nav>
 
-    <div class="container david-container david-where">
+    <div class="container david-container david-where" id="advance-notice">
       <div class="card text-xs-center">
         <div class="card-header">
-        Where should David go?
+        Where do you want David?
+        </div>
+        <h5>The quickest person makes the next decision.</h5>
+      </div>
+      <button type="button" class="btn btn-secondary submit" id="next">Next</button>
+    </div>
+
+    <div class="container david-container david-where" id="actual-card">
+      <div class="card text-xs-center">
+        <div class="card-header">
+        Where do you want David?
         </div>
         <h4>Drag and drop David</h4>
       </div>
-     <div id="containment-wrapper">
+      <div id="containment-wrapper">
         <div id="draggable" class="ui-widget-content">
             <img src="David.jpg" class = "image" >
         </div>
-     </div>
+      </div>
     
-    <button type="button" class="btn btn-secondary submit">Submit</button>
+    <button type="button" class="btn btn-secondary submit" id="submit">Submit</button>
 
     </div><!-- end of .david-container -->
 
