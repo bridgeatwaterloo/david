@@ -25,26 +25,32 @@ function processCheckin() {
       var distance = getDistanceFromLatLonInKm(userLat, userLon, targetLat, targetLon);
 
       // Our logic. If the distance between our user and the target is less than 100m, show the login screen, else update the view with a helpful message
-      if (distance < 100) {
+      if (distance < 0.5) {
         
-         setTimeout(function() {
+          setTimeout(function() {
             window.location.href = '/app/onboarding/';
-        }, 1000);
+          }, 1000);
       
 
       } else {
         stopLoadingAnimation()
         $('p.geolocation-message').html('Please try again when you get to the Southbank Centre');
       }
-    });
+    }, function(error) {
+          // error in here
+          stopLoadingAnimation();
+          noGeo();
+      });
 
   } else {
     /* geolocation IS NOT available */
-
+    noGeo();
   } // END of geolocation check
 } // END of processCheckin
 
+function noGeo(){
 
+}
 
 // http://stackoverflow.com/questions/27928/calculate-distance-between-two-latitude-longitude-points-haversine-formula
 
