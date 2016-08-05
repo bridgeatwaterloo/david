@@ -25,13 +25,12 @@ function processCheckin() {
       var distance = getDistanceFromLatLonInKm(userLat, userLon, targetLat, targetLon);
 
       // Our logic. If the distance between our user and the target is less than 100m, show the login screen, else update the view with a helpful message
+
       if (distance < 0.5) {
         
           setTimeout(function() {
             window.location.href = '/app/onboarding/';
           }, 1000);
-      
-
       } else {
         stopLoadingAnimation()
         $('p.geolocation-message').html('Please try again when you get to the Southbank Centre');

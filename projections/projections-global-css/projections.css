@@ -19,13 +19,15 @@ body {
   z-index: 10;
 }
 
-.panel-center h1{
+.panel-center h1 {
   font-family: helvetica;
   font-size: 4vw;
+  color: white;
 }
-.panel-center p{
+.panel-center p {
   font-family: helvetica;
   font-size: 4vw;
+  color: white;
 }
 /*
   Hide all views by default

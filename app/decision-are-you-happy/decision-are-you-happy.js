@@ -7,16 +7,11 @@ startCurrentView();
 
 function processDecision() {
 	
-	console.log(username)
 	var answer = $(this).attr('data-answer');
-	if (answer === "Yes") {
-		alert("Answered yes!")
-	} else {
-		alert("Answered no!")
-	}
+	startLoadingAnimation("Answered " + answer.toLowerCase() + "!");
 	database.ref('decision-are-you-happy/').update({
-  	[username]: answer
+  		[username]: answer
  	});
- 	finishedCurrentView();
+ 	finishedCurrentView(1000);
 }
 
