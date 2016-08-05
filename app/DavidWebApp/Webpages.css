@@ -1,0 +1,111 @@
+/*.location-heading finds all elements in the html that have a class of locationlink
+e.g.  <h2 class="location-heading">H2 content</h2> */
+body {
+	background-image: fixed;
+	margin: 0 auto;
+  font-family: "Helvetica", "Arial", "sans-serif";
+  line-height: 1.5;
+	}
+.intro {
+	text-align: center;
+	color: white
+	opacity: 0.2;
+	size: 1rem;
+}
+li a img {
+
+   width:20px;
+   height:40px;
+   position: fixed;
+}
+div h3 {
+	color: white;
+	size: 2rem;
+	text-decoration: blink;
+	margin-top: 1em;
+    padding-top: 1em;
+}
+.location-heading {
+	margin: 50px;
+	font-size: 16px;
+	color: white
+}
+.image-link {
+	display: block;
+	margin: auto;
+	margin-top: 30px;
+}
+.view {
+	background-color: black;
+}
+div .card-header{
+	background-color: white;
+	font-size: 2rem;
+	opacity: 0.4;
+	padding: 0.1em;
+}	
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0rem;
+}
+nav ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+
+    display: inline;
+}
+nav ul li a {
+
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: 
+    background:black;
+    color: white;
+}
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
+.logo {
+	display: inline-block;
+    vertical-align: top;
+    width: 120px;
+    align-items: right;
+    text-align: right;
+}
+header {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: static;
+  background-size: cover;
+  line-height: 1.2;
+  padding: 10vw 2em;
+  text-align: center;
+}
+
+header a {
+  border: 1px solid #e81c4f;
+  border-radius: 290486px;
+  color: blue;
+  font-size: 0.6em;
+  letter-spacing: 0.2em;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: none 200ms ease-out;
+  transition-property: color, background;
+}
+header a:hover {
+  background:  #e81c4f;
+  color: white;
+}
+
+.twitter-share-button {
+	color: white;
+}
+.FBSB {
+	color: white;
+}

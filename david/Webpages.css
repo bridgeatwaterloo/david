@@ -1,0 +1,120 @@
+/*.location-heading finds all elements in the html that have a class of locationlink
+e.g.  <h2 class="location-heading">H2 content</h2> */
+body {
+	background-image: fixed;
+	margin: 0 auto;
+    font-family: "Helvetica", "Arial", "sans-serif";
+    line-height: 1.5;
+    padding: 4em 1em;
+    color: #555;
+	}
+
+.intro {
+	text-align: center;
+	color: white
+	opacity: 0.2;
+	size: 1rem;
+}
+li a img {
+
+   width:20px;
+   height:40px;
+   position: fixed;
+}
+
+div h3 {
+	color: white;
+	size: 2rem;
+	text-decoration: blink;
+	margin-top: 1em;
+    padding-top: 1em;
+    
+}
+.location-heading {
+	margin: 50px;
+	font-size: 16px;
+}
+
+.image-link {
+	display: block;
+	margin: auto;
+	margin-top: 30px;
+}
+
+.view {
+	background-color: black;
+}
+
+div .card-header{
+	background-color: white;
+	font-size: 2rem;
+	opacity: 0.4;
+	padding: 0.1em;
+}	
+.location-heading{
+color: white
+}
+
+
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0rem;
+}
+
+nav ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+nav ul li {
+
+    display: inline;
+}
+nav ul li a {
+
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: 
+    background:black;
+    color: white;
+
+}
+pre {
+  background: #eee;
+}
+
+code {
+  padding: 2px 4px;
+  vertical-align: text-bottom;
+}
+
+pre {
+  padding: 1em;
+}
+a {
+  color: #e81c4f;
+}
+body {
+  color: #566b78;
+}
+
+code,
+pre {
+  background: #f5f7f9;
+  border-bottom: 1px solid #d8dee9;
+  color: #a7adba;
+}
+
+pre {
+  border-left: 2px solid #69c;
+}
+
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
