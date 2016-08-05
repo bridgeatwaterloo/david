@@ -21,7 +21,7 @@ $('.btn-prep').click(function(){
 
 $('.form-set-username').on('submit', processForm);
 
-$('.btn-instruction').click(finishedCurrentView);
+$('.btn-instruction').click(finishedOnboarding);
 
 // function to run when the form is submitted
 function processForm() {
@@ -32,6 +32,9 @@ function processForm() {
 	setTimeout(function() {$('.btn-prep').show();},10000);
  // get the entered user name from the input
 	var username = $('input').val();
+	if (username == null || username == ""){
+		username = "anonymous";
+	}
  	localStorage.setItem('username', username);
 		database.ref('users/'+ username).set({
     	username: username
