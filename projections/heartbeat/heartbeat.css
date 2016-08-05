@@ -40,3 +40,23 @@ svg {
 } 
 
 
+.heartbeat-content.heartbeat-level-1{
+  top: 28%;
+}
+
+.heartbeat-content.heartbeat-level-2{
+  top: 16%;
+}
+
+.heartbeat-content.heartbeat-level-3{
+  top: 4%;
+}
+
+.heartbeat-content.heartbeat-level-4{
+  top: -8%;
+}
+
+.heartbeat-content.heartbeat-level-5{
+  top: -20%;
+}
+
