@@ -5,19 +5,21 @@ startCurrentView();
 
 $('.btn-heartbeat').click(processBeat); // listens for how many times the user clicks the heart and calls the process beat function
 
+//listening for the value of the current view field in firebase to change
+firebase.database().ref('view/heartbeatLevel').on('value', function(snapshot) {
+  var heartbeatLevel = snapshot.val();
+  
+  if(heartbeatLevel === 5){
+    startLoadingAnimation();
+    finishedCurrentView(1000);
+  } //close the if
+});
+
 function processBeat() {
 	noOfTaps += 1; // adds one to the log of taps
 	database.ref('clicks/').update({
     [username]: noOfTaps,
   }); // updates the databases click record with the users name and current number of taps
-
-	if(noOfTaps === 10){
-  	startLoadingAnimation("Answered " + answer.toLowerCase() + "!");
-    database.ref('david-to-life/').update({
-      [username]:"Yes"
-  	}); // if the number of taps gets to 10 then their name is added to the gotToTenTaps record so that their name can be projected
-    finishedCurrentView();
-  } //close the if
 
   //Animate button on click
   $(this).addClass("pulse");

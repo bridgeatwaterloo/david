@@ -142,26 +142,35 @@ firebase.database().ref('decision-where-david').on('value', function(snapshot){
 
 firebase.database().ref('clicks').on('value', function(snapshot){
 	var clicks = 0;
-
+	var users = 0;
 	snapshot.forEach(function(data){
 		clicks = clicks +data.val();
+		users += 1;
 	});
 	//console.log(clicks);
-
-	if(clicks<50){
+	const maxClicksPerUser = 25;
+	var clicksPerUser = clicks/users/maxClicksPerUser;
+	var level = 0;
+	if (clicksPerUser < 0.25){
 		speed=4000;
-
-	}else if (clicks<100){
+		level = 1;
+	} else if (clicksPerUser < 0.5){
 		speed=3000;
-	}else if (clicks<150){
+		level = 2;
+	} else if (clicksPerUser < 0.75){
 		speed=2500;
-	}else if (clicks<200){
+		level = 3;
+	} else if (clicksPerUser < 1){
 		speed=2000;
-	}else{
+		level = 4;
+	} else{
 		speed=1500
+		level = 5;
 	}
 
-
+	database.ref('view/').update({
+		heartbeatLevel: level
+	});
 });
 
 firebase.database().ref('decision-want-more').on('value', function(snapshot){
