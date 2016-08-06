@@ -1,6 +1,6 @@
 var coin = new Audio('Coin.mp3');
- var meow = new Audio("purrline.mp3")
-var resultsound = new Audio('result.mp3');
+ var meow = new Audio("purrline-30.mp3")
+var resultsound = new Audio('result-30.mp3');
 
 function showIndicatorView(view) {
   $('.view').hide();
