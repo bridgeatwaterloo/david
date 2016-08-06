@@ -1,7 +1,9 @@
 // Initialization functions:
+var interval;
 function initializeHeartbeat() {
 	showIndicatorView('.david-to-life');
 	startHeartbeat();
+	interval = setInterval(beatPump, 30);
 }
 
 firebase.database().ref('view').on('value', function(snapshot) {
