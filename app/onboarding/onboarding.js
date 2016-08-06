@@ -33,8 +33,8 @@ function processForm() {
  // get the entered user name from the input
 	var username = $('input').val();
 	if (username == null || username == ""){
- -		username = "anonymous";
- -	}
+ 		username = "anonymous";
+ 	}
  	localStorage.setItem('username', username);
 		database.ref('users/'+ username).set({
     	username: username

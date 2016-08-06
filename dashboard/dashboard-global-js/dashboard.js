@@ -36,3 +36,17 @@ function processHolding(){
     			});
 		}, 3000);
 }
+
+$('.clear').click(processClear);
+
+function processClear(){
+		database.ref('clear/').update({
+		clear: 'true'
+		});
+
+		setTimeout(function(){
+			    database.ref('clear/').update({
+    				clear: 'false'
+    			});
+		}, 3000);
+}
