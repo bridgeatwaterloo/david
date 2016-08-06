@@ -1,8 +1,9 @@
 // Initialization functions:
+var interval;
 function initializeHeartbeat() {
 	showIndicatorView('.david-to-life');
 	startHeartbeat();
-	setInterval(beatPump, 30);
+	interval = setInterval(beatPump, 30);
 
 }
 
