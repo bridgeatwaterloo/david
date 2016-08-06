@@ -2,7 +2,7 @@
 
 // showView('.view-decision-result');
 
-// 
+//
 
 
 
@@ -20,14 +20,14 @@ function myMsg(message){
 	function animateWords(ctx) {
 		var dashLen = 120, dashOffset = dashLen, speed = 5,
 	    txt = message, x = 1, i = 0;
-		ctx.font = "20px Dosis"; 
-		ctx.lineWidth = 5; ctx.lineJoin = "round"; ctx.globalAlpha = 2/3;
+		ctx.font = "20px Dosis";
+		ctx.lineWidth = 1; ctx.lineJoin = "round"; ctx.globalAlpha = 2/3;
 		ctx.strokeStyle = ctx.fillStyle = "#ffffff";
 		const numberOfLines = (txt.match(/\n/g) || []).length;
-		const lineHeight = 30;
-		const lineSpacing = 10;
+		const lineHeight = 50;
+		const lineSpacing = 20;
 		var y = 90 - (numberOfLines / 2) * (lineHeight + lineSpacing);
-		
+
 		(function loop() {
 		  ctx.clearRect(x, y - lineHeight, 60, 150);
 		  ctx.setLineDash([dashLen - dashOffset, dashOffset - speed]); // create a long dash mask
@@ -48,9 +48,9 @@ function myMsg(message){
 		  } else {
 		    ctx.fillText(txt[i], x, y);                               // fill final letter
 		    dashOffset = dashLen;                                      // prep next char
-		    x += ctx.measureText(nextLetter).width + ctx.lineWidth * (Math.random() + 0.5);
-		    ctx.setTransform(1, 0, 0, 1, 0, 3 * Math.random());        // random y-delta
-		    ctx.rotate(Math.random() * 0.005);                         // random rotation
+		    x += ctx.measureText(nextLetter).width + ctx.lineWidth * (0.5 + 0.5);
+		    ctx.setTransform(1, 0, 0, 1, 0, 3 * 0.1);        // random y-delta
+		    //ctx.rotate(0.5 * 0.005);                         // random rotation
 		    i += 1;
 		    if (i < txt.length) {
 		    	requestAnimationFrame(loop);
@@ -71,4 +71,3 @@ function clearMsg(){
 }
 
 
- 
