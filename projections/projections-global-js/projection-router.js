@@ -2,6 +2,7 @@
 function initializeHeartbeat() {
 	showIndicatorView('.david-to-life');
 	startHeartbeat();
+	setInterval(beatPump, 30);
 
 }
 
