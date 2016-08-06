@@ -224,6 +224,7 @@ function updateLevelCss(level){
 firebase.database().ref('clear').on('value', function(snapshot) {
   var toClear = snapshot.val().clear;
   if(toClear ==='true'){
+  	clearInterval(interval);
     $('.view').hide();
   }
 });
