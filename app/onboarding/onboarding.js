@@ -25,8 +25,6 @@ $('.btn-instruction').click(finishedOnboarding);
 
 // function to run when the form is submitted
 function processForm() {
-
-
 	showDiv(".prep");
 	$('.btn-all').hide();
 	setTimeout(function() {$('.btn-prep').show();},3000);
@@ -42,6 +40,6 @@ function processForm() {
  	return false;
 };
 
-showDiv(".username")
+showDiv(".username");
 startCurrentView();
 

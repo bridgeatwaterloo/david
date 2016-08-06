@@ -51,3 +51,11 @@ body {
   animation-fill-mode: none;
   animation-play-state: running;
 }
+
+.prep {
+  display: none;
+}
+
+.instruction {
+  display: none;
+}
