@@ -148,7 +148,7 @@ firebase.database().ref('clicks').on('value', function(snapshot){
 		users += 1;
 	});
 	//console.log(clicks);
-	const maxClicksPerUser = 25;
+	const maxClicksPerUser = 40;
 	var clicksPerUser = 0;
 	if (users > 0) {
 		clicksPerUser = clicks/users/maxClicksPerUser;
