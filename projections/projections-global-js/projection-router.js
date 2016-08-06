@@ -39,7 +39,7 @@ firebase.database().ref('view').on('value', function(snapshot) {
 		   		setTimeout(function() {
 					var word = $('.decision-where-david-result').html();
 					var name = $('.decision-where-david-name').html();
-			 		myMsg(name+" chose "+word);
+			 		myMsg(name + "\nchose\n" + word);
   				}, timeToChoose);
 		   		//code block
 		   		break;
