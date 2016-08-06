@@ -64,7 +64,7 @@ firebase.database().ref('decision-clothing').on('value', function(snapshot){
 firebase.database().ref('decision-emotion').on('value', function(snapshot){
 	var list ={
 		"Unhappy": 0,
-		"Joyful" : 0,
+		"Joyfull" : 0,
 		"Needy" : 0,
 		"Frustrated" :0,
 		"Apathetic" :0
@@ -74,7 +74,7 @@ firebase.database().ref('decision-emotion').on('value', function(snapshot){
 		//console.log(data.key + ": " +data.val() );
 		if(data.val()==="Unhappy"){
 			list.Unhappy++;
-		}else if (data.val()==="Joyful"){
+		}else if (data.val()==="Joyfull"){
 			list.Joyfull++;
 		}else if (data.val()==="Needy"){
 			list.Needy++;
