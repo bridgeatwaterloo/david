@@ -148,7 +148,7 @@ firebase.database().ref('clicks').on('value', function(snapshot){
 		users += 1;
 	});
 	//console.log(clicks);
-	const maxClicksPerUser = 40;
+	const maxClicksPerUser = 80;
 	var clicksPerUser = 0;
 	if (users > 0) {
 		clicksPerUser = clicks/users/maxClicksPerUser;
@@ -194,10 +194,10 @@ firebase.database().ref('decision-want-more').on('value', function(snapshot){
 	});
 
 	//console.log("yes:" +numberOfYes);
-	if(numberOfYes>numberOfNo){
-		$(".decision-want-more-result").html("YES");
-	}else{
+	if(numberOfYes<numberOfNo){
 		$(".decision-want-more-result").html("NO");
+	}else{
+		$(".decision-want-more-result").html("YES");
 	}
 });
 

@@ -73,7 +73,7 @@ firebase.database().ref('view').on('value', function(snapshot) {
 			   		setTimeout(function() {
 						var word = $('.decision-want-more-result').html();
 				 		myMsg(word);
-	  				}, 5000);
+	  				}, 7000);
 
 		   		//code block
 		   		break;
