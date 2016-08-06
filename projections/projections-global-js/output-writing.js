@@ -15,29 +15,46 @@ function myMsg(message){
 	for (var i=0; i<canvases.length; i++) {
 		var ctx = canvases[i].getContext("2d");
 	 	animateWords(ctx);
-	 }
+	}
 
 	function animateWords(ctx) {
 		var dashLen = 120, dashOffset = dashLen, speed = 5,
 	    txt = message, x = 1, i = 0;
-		ctx.font = "40px Dosis"; 
+		ctx.font = "20px Dosis"; 
 		ctx.lineWidth = 5; ctx.lineJoin = "round"; ctx.globalAlpha = 2/3;
 		ctx.strokeStyle = ctx.fillStyle = "#ffffff";
-
+		const numberOfLines = (txt.match(/\n/g) || []).length;
+		const lineHeight = 30;
+		const lineSpacing = 10;
+		var y = 90 - (numberOfLines / 2) * (lineHeight + lineSpacing);
+		
 		(function loop() {
-		  ctx.clearRect(x, 0, 60, 150);
+		  ctx.clearRect(x, y - lineHeight, 60, 150);
 		  ctx.setLineDash([dashLen - dashOffset, dashOffset - speed]); // create a long dash mask
 		  dashOffset -= speed;                                         // reduce dash length
-		  ctx.strokeText(txt[i], x, 90);                               // stroke letter
+		  var letter = txt[i];
+		  if (letter === "\n") {
+		  	i += 1;
+		  	letter = txt[i]
+		  	y += lineHeight + lineSpacing;
+		  	x = 0;
+		  }
+		  var nextLetter = txt[i];
 
-		  if (dashOffset > 0) requestAnimationFrame(loop);             // animate
-		  else {
-		    ctx.fillText(txt[i], x, 90);                               // fill final letter
+		  ctx.strokeText(txt[i], x, y);                               // stroke letter
+
+		  if (dashOffset > 0) {
+			requestAnimationFrame(loop);             // animate
+		  } else {
+		    ctx.fillText(txt[i], x, y);                               // fill final letter
 		    dashOffset = dashLen;                                      // prep next char
-		    x += ctx.measureText(txt[i++]).width + ctx.lineWidth * Math.random();
+		    x += ctx.measureText(nextLetter).width + ctx.lineWidth * (Math.random() + 0.5);
 		    ctx.setTransform(1, 0, 0, 1, 0, 3 * Math.random());        // random y-delta
 		    ctx.rotate(Math.random() * 0.005);                         // random rotation
-		    if (i < txt.length) requestAnimationFrame(loop);
+		    i += 1;
+		    if (i < txt.length) {
+		    	requestAnimationFrame(loop);
+		    }
 		  }
 		})();
 	}

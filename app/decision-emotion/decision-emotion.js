@@ -2,7 +2,7 @@ $('.btn-unhappy').click(processEmotionDecision)
 $('.btn-joyful').click(processEmotionDecision)
 $('.btn-needy').click(processEmotionDecision)
 $('.btn-frustrated').click(processEmotionDecision)
-$('.btn-appathetic').click(processEmotionDecision)
+$('.btn-apathetic').click(processEmotionDecision)
 
 var username = getUsername();
 $('.username').html(username);

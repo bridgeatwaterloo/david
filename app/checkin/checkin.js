@@ -26,7 +26,7 @@ function processCheckin() {
 
       // Our logic. If the distance between our user and the target is less than 100m, show the login screen, else update the view with a helpful message
 
-      if (distance < 0.5) {
+      if (distance < 1) {
         
           setTimeout(function() {
             window.location.href = '/app/onboarding/';

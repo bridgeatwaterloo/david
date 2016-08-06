@@ -19,20 +19,32 @@
       </div>
     </nav>
 
-    <div class="container david-container david-where">
+    <div class="container david-container david-where" id="advance-notice">
       <div class="card text-xs-center">
         <div class="card-header">
-         Whoever answers fastest will decide!!
+
+        Where do you want David?
         </div>
-        <h4>Drag and drop David</h4>
+        <div class="card-block">
+          <h5>Whoever answers fastest will decide!</h5>
+        </div>
       </div>
-     <div id="containment-wrapper">
+      <button type="button" class="btn btn-secondary submit" id="next">Next</button>
+    </div>
+
+    <div class="container david-container david-where" id="actual-card">
+      <div class="card text-xs-center">
+        <div class="card-block">
+          <h4>Drag and drop David</h4>
+        </div>
+      </div>
+      <div id="containment-wrapper">
         <div id="draggable" class="ui-widget-content">
             <img src="David.jpg" class = "image" >
         </div>
      </div>
 
-    <button type="button" class="btn btn-secondary submit">Submit</button>
+    <button type="button" class="btn btn-secondary submit" id="submit">Submit</button>
 
     </div><!-- end of .david-container -->
 
