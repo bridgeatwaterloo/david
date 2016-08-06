@@ -4,7 +4,6 @@ function initializeHeartbeat() {
 	showIndicatorView('.david-to-life');
 	startHeartbeat();
 	interval = setInterval(beatPump, 30);
-
 }
 
 firebase.database().ref('view').on('value', function(snapshot) {
@@ -70,12 +69,12 @@ firebase.database().ref('view').on('value', function(snapshot) {
 		   case "/app/decision-want-more/" :
 		   		showIndicatorView('.decision-want-more');
 		   		// function that displays text on side panels after set period of time as described above switch statement
-		   		
+
 			   		setTimeout(function() {
 						var word = $('.decision-want-more-result').html();
 				 		myMsg(word);
 	  				}, 5000);
-		   		
+
 		   		//code block
 		   		break;
 		   case "/app/decision-are-you-finished/" :
