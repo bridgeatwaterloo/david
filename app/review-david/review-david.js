@@ -15,7 +15,7 @@ function processDecision() {
  	$(".card-header").html("Epoq thanks you for your data.");
  	$("#rating-form").remove();
 
- 	database.ref('review-david').once('value', function(snapshot){
+ 	database.ref('review-david').on('value', function(snapshot){
  		var userCount = 0;
  		var ratingSum = 0;
  		snapshot.forEach(function(data){
