@@ -24,7 +24,11 @@ $( "#draggable" ).draggable({ containment: "#containment-wrapper", scroll: false
     }
 });
 
-$('.submit').click(submit);
+$('#next').click(swapViews);
+function swapViews() {
+    $('#advance-notice').hide();
+    $('#actual-card').show();
+}
 
 function processPosition(xPos, yPos, parentWidth, parentHeight) {
     const horizRegions = 3;
@@ -37,6 +41,7 @@ function processPosition(xPos, yPos, parentWidth, parentHeight) {
     return result;
 }
 
+$('#submit').click(submit);
 function submit() {
     if (targetPosition != undefined) {
         var username = getUsername();

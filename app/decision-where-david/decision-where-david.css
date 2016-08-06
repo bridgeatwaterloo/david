@@ -31,3 +31,7 @@
 	border-color: green;
 	color: blue;
 }
+
+#actual-card {
+	display: none;
+}
