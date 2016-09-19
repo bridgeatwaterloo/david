@@ -18,22 +18,22 @@ function processCheckin() {
       var userLon = position.coords.longitude;
 
       // The lat and long of Southbank centre
-      var targetLat = 51.505533; 
-      var targetLon = -0.117014;
+      var targetLat = 51.5014331; 
+      var targetLon = -0.1763037;
 
       // calculate the distance by passing our variables to our helper function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) saved in helper-functions.js. The function returns a value in km that is the distance between two points. We assign this to a new variable, distance.
       var distance = getDistanceFromLatLonInKm(userLat, userLon, targetLat, targetLon);
 
       // Our logic. If the distance between our user and the target is less than 100m, show the login screen, else update the view with a helpful message
 
-      if (distance < 1) {
+      if (distance < 10000) {
         
           setTimeout(function() {
             window.location.href = '/app/onboarding/';
           }, 1000);
       } else {
         stopLoadingAnimation()
-        $('p.geolocation-message').html('Please try again when you get to the Southbank Centre');
+        $('p.geolocation-message').html('Please try again when you get to the Royal Geographical Society (RGS)');
       }
     }, function(error) {
           // error in here
