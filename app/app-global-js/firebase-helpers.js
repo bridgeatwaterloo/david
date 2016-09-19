@@ -11,10 +11,11 @@ var database = firebase.database();
 //----FUNCTIONS---------------//
 function setupFirebase(){
   var config = {
-    apiKey: "AIzaSyBl1i8P3m__Yp7Y-Hq-6XbOOaC232muFSw",
-    authDomain: "david-app-test.firebaseapp.com",
-    databaseURL: "https://david-app-test.firebaseio.com",
-    storageBucket: "david-app-test.appspot.com",
+    apiKey: "AIzaSyDYubCeB7K0hEieX1P8ciFjmwXP1dzYKNI",
+    authDomain: "davids-app-6e4cd.firebaseapp.com",
+    databaseURL: "https://davids-app-6e4cd.firebaseio.com",
+    storageBucket: "davids-app-6e4cd.appspot.com",
+    messagingSenderId: "637187185418"
   };
   firebase.initializeApp(config);
 }
