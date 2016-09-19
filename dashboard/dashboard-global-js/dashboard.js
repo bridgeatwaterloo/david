@@ -41,9 +41,8 @@ $('.clear').click(processClear);
 
 function processClear(){
 		database.ref('clear/').update({
-		clear: 'true'
+			clear: 'true'
 		});
-
 		setTimeout(function(){
 			    database.ref('clear/').update({
     				clear: 'false'
